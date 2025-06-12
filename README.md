@@ -4,7 +4,7 @@
 
 ## 📡 Demo
 
-👉 Zobacz stronę na żywo: [https://retro-mazur.onrender.com](https://retro-mazur.onrender.com)
+👉 Zobacz stronę na żywo: [[https://retro-mazur.dolcecx.pl](https://retro-mazur.dolcecx.pl)
 
 ## ✨ Funkcje
 
