@@ -80,7 +80,7 @@ export default function Header() {
               <a href="#" className="hover:text-coin-yellow transition-colors font-medium">KOLEKCJE</a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">MARKI</a>
+              <span className="text-coin-yellow font-pixel text-sm">🏷️ MARKI</span>
               <span className="text-coin-yellow font-pixel text-sm">⭐ PROMOCJE</span>
             </div>
           </div>
