@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 
 export default function Header() {
   const [showCategories, setShowCategories] = useState(false);
@@ -324,15 +324,15 @@ export default function Header() {
         </div>
 
         {/* Overlay to close dropdowns */}
-        {(showCategories || showBrands) && (
-          <div 
-            className="fixed inset-0 z-[9998]" 
-            onClick={() => {
-              setShowCategories(false);
-              setShowBrands(false);
-            }}
-          />
-        )}
+      {(showCategories || showBrands) && (
+        <div 
+          className="fixed inset-0 z-[9998]" 
+          onClick={() => {
+            setShowCategories(false);
+            setShowBrands(false);
+          }}
+        />
+      )}
       </nav>
     </header>
   );
