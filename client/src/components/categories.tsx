@@ -43,13 +43,24 @@ export default function Categories() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="relative inline-block mb-6">
-            {/* Background block like in Mario */}
-            <div className="bg-coin-yellow border-4 border-pixel-black px-8 py-4 transform rotate-1 absolute -inset-2"></div>
-            <div className="bg-mario-red border-4 border-pixel-black px-8 py-4 relative">
-              <h2 className="font-pixel text-2xl lg:text-3xl text-white text-shadow-pixel tracking-wider">
-                🌍 WYBIERZ SWÓJ ŚWIAT
-              </h2>
+            {/* Cloud background */}
+            <div className="relative">
+              <img 
+                src="/src/pixel SVG/chmurka.svg" 
+                alt="Cloud" 
+                className="w-96 h-32 object-contain mx-auto filter drop-shadow-lg"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h2 className="font-pixel text-xl lg:text-2xl text-pixel-black text-shadow-white tracking-wider px-4">
+                  ☁️ WYBIERZ POZIOM
+                </h2>
+              </div>
             </div>
+            
+            {/* Floating elements around cloud */}
+            <div className="absolute -top-4 -left-4 text-2xl animate-bounce">⭐</div>
+            <div className="absolute -top-2 -right-6 text-xl animate-pulse">✨</div>
+            <div className="absolute -bottom-2 left-8 text-lg animate-bounce" style={{animationDelay: '0.5s'}}>💫</div>
           </div>
           
           </div>
