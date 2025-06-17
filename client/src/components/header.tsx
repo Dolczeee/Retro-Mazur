@@ -261,7 +261,7 @@ export default function Header() {
           {/* Categories Dropdown */}
           {showCategories && (
             <div 
-              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50"
+              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[9999]"
               onMouseEnter={() => setShowCategories(true)}
               onMouseLeave={() => setShowCategories(false)}
             >
@@ -293,7 +293,7 @@ export default function Header() {
           {/* Brands Dropdown */}
           {showBrands && (
             <div 
-              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50"
+              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[9999]"
               onMouseEnter={() => setShowBrands(true)}
               onMouseLeave={() => setShowBrands(false)}
             >
@@ -326,7 +326,7 @@ export default function Header() {
         {/* Overlay to close dropdowns */}
         {(showCategories || showBrands) && (
           <div 
-            className="fixed inset-0 z-40" 
+            className="fixed inset-0 z-[9998]" 
             onClick={() => {
               setShowCategories(false);
               setShowBrands(false);
