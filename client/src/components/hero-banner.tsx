@@ -10,16 +10,14 @@ export default function HeroBanner() {
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat-x'
     }}>
-      <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '2800px'}}>
+      <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
         <div className="flex gap-6">
           {/* Main banner - left side */}
           <div className="flex-shrink-0">
-            <div className="relative overflow-hidden rounded-lg" style={{width: '2452px', height: '920px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '840px', height: '316px'}}>
               <img 
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
                 alt="Retro gaming collection"
-                width="2452"
-                height="920"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent">
