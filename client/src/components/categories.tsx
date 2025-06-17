@@ -86,11 +86,11 @@ export default function Categories() {
           
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 max-w-6xl mx-auto">
           {worlds.map((world, index) => (
             <div
               key={index}
-              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-6`}
+              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-3`}
             >
               {/* Top - World number */}
               <div className="font-pixel text-[10px] text-coin-yellow mb-2 bg-pixel-black px-1.5 py-0.5 inline-block">
