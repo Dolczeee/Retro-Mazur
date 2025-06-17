@@ -1,3 +1,4 @@
+
 import Header from "@/components/header";
 import HeroBanner from "@/components/hero-banner";
 import FeaturedProducts from "@/components/featured-products";

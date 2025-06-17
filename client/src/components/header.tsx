@@ -250,7 +250,7 @@ export default function Header() {
     }, 100);
   };
 
-  const cancelClose = () => {
+  conconst cancelClose = () => {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
@@ -304,7 +304,52 @@ export default function Header() {
                 placeholder="Wpisz nazwę lub kod produktu..." 
                 className="flex-1 px-4 py-3 border-3 border-pixel-black border-r-0 text-lg focus:outline-none focus:border-mario-blue rounded-r-none"
               />
-              <Button className="mario-button text-white px-4 py-3 border-l-0 rounded-l-none">
+              <Button className="mario-button bg-mario-red text-white px-6 py-3 border-3 border-pixel-black hover:bg-red-700 transition-colors">
+                <Search className="w-6 h-6" />
+              </Button>
+            </div>
+          </div>
+
+          {/* User Actions */}
+          <div className="flex items-center space-x-4">
+            <Button variant="ghost" className="p-2">
+              <User className="w-6 h-6" />
+            </Button>
+            <Button variant="ghost" className="p-2 relative">
+              <Heart className="w-6 h-6" />
+              <span className="absolute -top-1 -right-1 bg-mario-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                3
+              </span>
+            </Button>
+            <Button variant="ghost" className="p-2 relative">
+              <ShoppingCart className="w-6 h-6" />
+              <span className="absolute -top-1 -right-1 bg-mario-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                0
+              </span>
+            </Button>
+          </div>
+        </div>
+
+        {/* Navigation Menu */}
+        <div className="border-t border-gray-200">
+          <nav className="flex items-center space-x-8 py-4">
+            <Button variant="ghost" className="flex items-center space-x-1">
+              <Menu className="w-5 h-5" />
+              <span>Wszystkie kategorie</span>
+              <ChevronDown className="w-4 h-4" />
+            </Button>
+            
+            <div className="flex items-center space-x-6">
+              <a href="#" className="text-gray-700 hover:text-mario-blue transition-colors">Konsole</a>
+              <a href="#" className="text-gray-700 hover:text-mario-blue transition-colors">Gry</a>
+              <a href="#" className="text-gray-700 hover:text-mario-blue transition-colors">Akcesoria</a>
+              <a href="#" className="text-gray-700 hover:text-mario-blue transition-colors">Kolekcje</a>
+              <a href="#" className="text-gray-700 hover:text-mario-blue transition-colors">Promocje</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>on text-white px-4 py-3 border-l-0 rounded-l-none">
                 <Search className="w-4 h-4" />
               </Button>
             </div>
