@@ -86,40 +86,40 @@ export default function Categories() {
           
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="space-y-4">
           {worlds.map((world, index) => (
             <div
               key={index}
-              className={`${world.color} text-white p-6 border-4 border-white transform hover:scale-105 transition-all duration-300 cursor-pointer group relative`}
+              className={`${world.color} text-white border-4 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative flex items-center p-6`}
             >
-              {/* World number */}
-              <div className="font-pixel text-xs text-coin-yellow mb-2 bg-pixel-black px-2 py-1 inline-block">
-                WORLD {world.world}
+              {/* Left side - Icon and World number */}
+              <div className="flex-shrink-0 mr-6">
+                <div className="font-pixel text-xs text-coin-yellow mb-2 bg-pixel-black px-2 py-1 inline-block">
+                  WORLD {world.world}
+                </div>
+                <div className="text-6xl power-up">{world.icon}</div>
               </div>
 
-              {/* Icon */}
-              <div className="text-5xl mb-4 text-center power-up">{world.icon}</div>
-
-              {/* Title */}
-              <h3 className="font-pixel text-lg mb-3 text-center">
-                {world.name}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm mb-4 text-center opacity-90">
-                {world.description}
-              </p>
-
-              {/* Items count */}
-              <div className="text-center font-pixel text-xs text-coin-yellow">
-                {world.items}
+              {/* Middle - Content */}
+              <div className="flex-grow">
+                <h3 className="font-pixel text-xl mb-2">
+                  {world.name}
+                </h3>
+                <p className="text-sm mb-2 opacity-90">
+                  {world.description}
+                </p>
+                <div className="font-pixel text-xs text-coin-yellow">
+                  {world.items}
+                </div>
               </div>
 
-              {/* Enter button */}
-              <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <Button className="bg-coin-yellow text-pixel-black font-pixel text-xs px-4 py-2 mario-button">
-                  ENTER →
-                </Button>
+              {/* Right side - Enter button */}
+              <div className="flex-shrink-0 ml-6">
+                <div className="opacity-70 group-hover:opacity-100 transition-opacity">
+                  <Button className="bg-coin-yellow text-pixel-black font-pixel text-sm px-6 py-3 mario-button">
+                    ENTER →
+                  </Button>
+                </div>
               </div>
 
               {/* Mario-style decoration */}
