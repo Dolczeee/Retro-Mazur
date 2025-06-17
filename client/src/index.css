@@ -296,3 +296,15 @@
 .menu-item-with-separator {
   position: relative;
 }
+
+/* Smooth dropdown animations */
+.dropdown-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.dropdown-container.active {
+  transform: translateY(0);
+  opacity: 1;
+}

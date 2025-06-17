@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -245,7 +244,7 @@ export default function Header() {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    
+
     hoverTimeoutRef.current = setTimeout(() => {
       setActiveMenu(null);
     }, 100);
@@ -386,7 +385,7 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
                 <div className="grid grid-cols-6 gap-6 p-6">
                   {categories.map((category, index) => (
                     <div key={index} className="space-y-3">
@@ -422,7 +421,7 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
                 <div className="grid grid-cols-6 gap-6 p-6">
                   {brands.map((brand, index) => (
                     <div key={index} className="space-y-3">
@@ -458,7 +457,7 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
                 <div className="grid grid-cols-4 gap-6 p-6">
                   {promotions.map((promo, index) => (
                     <div key={index} className="space-y-3">
@@ -488,7 +487,7 @@ export default function Header() {
                     </div>
                   ))}
                 </div>
-                
+
                 {/* Special footer with extra offers */}
                 <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
                   <div className="grid grid-cols-3 gap-4 text-white text-center">
