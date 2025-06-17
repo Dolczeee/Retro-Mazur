@@ -177,13 +177,13 @@ export default function Header() {
       badge: "HOT!",
       badgeColor: "bg-mario-red",
       subcategories: [
-        "-60% na Guzra Combo Pack 🎮",
-        "-16% Cannibal Shad Fishy 🐟",
+        "-60% na Mario Bros Combo Pack 🎮",
+        "-45% Sonic Genesis Collection 💨",
         "-25% Super Mario Bros. NES 🍄",
         "-30% Zelda: Link's Awakening 🗡️",
-        "-40% Sonic Genesis Collection 💨",
-        "-50% Street Fighter Alpha 👊",
-        "-35% Mega Man X Series 🤖"
+        "-40% Street Fighter Alpha 👊",
+        "-50% Mega Man X Series 🤖",
+        "-35% Final Fantasy VII 🎭"
       ]
     },
     {
@@ -192,18 +192,18 @@ export default function Header() {
       badge: "LIMITED",
       badgeColor: "bg-pipe-green",
       subcategories: [
-        "-15% Dalwa Classic Pack 📦",
-        "-10% Guru Master Edition 🧘",
-        "-20% Savage Gear Bundle 🎣",
-        "-15% Match Pro Controller 🎮",
-        "-25% Retgers Arcade Stick 🕹️",
+        "-15% Retro Gaming Pack 📦",
+        "-20% Arcade Stick Bundle 🕹️",
+        "-25% Controller Master Set 🎮",
+        "-30% Vintage Console Deal 📺",
         "Kup 2, zapłać za 1 - Gry NES 🎁",
-        "Darmowa dostawa od 199 zł 🚚"
+        "Darmowa dostawa od 199 zł 🚚",
+        "Mystery Box - Zestaw losowy 🎁"
       ]
     },
     {
       icon: "📅",
-      title: "DRAPIEŻNY TYDZIEŃ",
+      title: "RETRO TYDZIEŃ",
       badge: "7 DNI",
       badgeColor: "bg-coin-yellow text-pixel-black",
       subcategories: [
@@ -213,28 +213,27 @@ export default function Header() {
         "Akcesoria Retro - do 40% off ⚡",
         "Kable HDMI - 2+1 gratis 📺",
         "Cleaning Kity - 50% taniej 🧽",
-        "Mystery Box - Zestaw losowy 🎁"
+        "Vintage Collection - Extra 25% 🏆"
       ]
     },
     {
       icon: "🏆",
-      title: "DRAPIEŻNE PROMOCJE",
+      title: "GAMING PROMOCJE",
       badge: "EXTRA",
       badgeColor: "bg-mario-blue",
       subcategories: [
-        "Wędka Favorite Token + Gratisy (27) 🎣",
-        "Wędki Westin + Gratis Lures 🐟",
-        "Bagaż Westin M + Gratis Tools ⚙️",
-        "Multiplikatory Westin + Gratisy (6) 🎰",
-        "Zestaw Starter Pack - 70% off 📦",
-        "Vintage Console + 5 gier gratis 🕹️",
-        "Retro Gaming Chair + poduszka 🪑"
+        "Gaming Chair + Gratis Pad 🪑",
+        "Retro Console + 5 gier gratis 🕹️",
+        "Arcade Stick + Fighting Games 👊",
+        "Gaming Setup - 70% off 📦",
+        "Collector's Edition Bundle 💎",
+        "Pro Gaming Pack + Akcesoria ⚙️",
+        "Ultimate Retro Experience 🌟"
       ]
     }
   ];
 
   const openMenu = (menuName: string) => {
-    // Clear any existing timeout
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
@@ -243,18 +242,16 @@ export default function Header() {
   };
 
   const closeMenu = () => {
-    // Add small delay before closing to prevent flickering
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
     
     hoverTimeoutRef.current = setTimeout(() => {
       setActiveMenu(null);
-    }, 150); // 150ms delay
+    }, 100);
   };
 
   const cancelClose = () => {
-    // Cancel the close timeout when re-entering
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
@@ -262,7 +259,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-lg border-b-4 border-pixel-black relative">
+    <header className="bg-white shadow-lg border-b-4 border-pixel-black relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex justify-between items-center py-2 text-sm border-b border-gray-200">
@@ -346,13 +343,13 @@ export default function Header() {
                 <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
                   <Menu className="w-4 h-4 mr-2" /> 
                   KATEGORIE
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${activeMenu === 'categories' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'categories' ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Categories Dropdown */}
                 {activeMenu === 'categories' && (
                   <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -395,13 +392,13 @@ export default function Header() {
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   🏷️ MARKI
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${activeMenu === 'brands' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'brands' ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Brands Dropdown */}
                 {activeMenu === 'brands' && (
                   <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -441,13 +438,13 @@ export default function Header() {
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   ⭐ PROMOCJE
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${activeMenu === 'promotions' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'promotions' ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Promotions Dropdown */}
                 {activeMenu === 'promotions' && (
                   <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -509,7 +506,7 @@ export default function Header() {
       {/* Overlay to close dropdowns when clicking outside */}
       {activeMenu && (
         <div 
-          className="fixed inset-0 z-[99]" 
+          className="fixed inset-0 z-[150]" 
           onClick={() => {
             if (hoverTimeoutRef.current) {
               clearTimeout(hoverTimeoutRef.current);
