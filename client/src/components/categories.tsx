@@ -76,18 +76,11 @@ export default function Categories() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="relative inline-block mb-6">
-            {/* Cloud background */}
-            <div className="relative">
-              <img 
-                src="/src/pixel SVG/chmurka.svg" 
-                alt="Cloud" 
-                className="w-96 h-32 object-contain mx-auto filter drop-shadow-lg"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="font-pixel text-xl lg:text-2xl text-pixel-black text-shadow-white tracking-wider px-4">
-                  ☁️ WYBIERZ POZIOM
-                </h2>
-              </div>
+            {/* Simple text banner */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg px-8 py-4 shadow-lg border-2 border-white">
+              <h2 className="font-pixel text-xl lg:text-2xl text-pixel-black tracking-wider">
+                WYBIERZ SWÓJ ŚWIAT
+              </h2>
             </div>
           </div>
           
