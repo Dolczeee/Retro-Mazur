@@ -74,11 +74,11 @@ export default function Categories() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="relative inline-block mb-6">
+        <div className="text-center mb-8">
+          <div className="relative inline-block mb-4">
             {/* Simple text banner */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-lg px-8 py-4 shadow-lg border-2 border-white">
-              <h2 className="font-pixel text-xl lg:text-2xl text-pixel-black tracking-wider">
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg px-6 py-3 shadow-lg border-2 border-white">
+              <h2 className="font-pixel text-lg lg:text-xl text-pixel-black tracking-wider">
                 WYBIERZ SWÓJ ŚWIAT
               </h2>
             </div>
