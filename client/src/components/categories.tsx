@@ -41,10 +41,10 @@ export default function Categories() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-pixel text-3xl text-white mb-4">
+        <div className="text-center mb-8">
+          <p className="font-pixel text-sm text-white/80 mb-2 tracking-wide">
             🌍 WYBIERZ SWÓJ ŚWIAT
-          </h2>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
