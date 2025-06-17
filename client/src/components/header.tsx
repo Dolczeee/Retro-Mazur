@@ -169,7 +169,7 @@ export default function Header() {
                       <div key={index} className="space-y-3">
                         <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
                           <span className="text-2xl">{category.icon}</span>
-                          <h3 className="font-pixel text-sm text-mario-red">{category.title}</h3>
+                          <h3 className="font-pixel text-sm text-mario-red font-bold">{category.title}</h3>
                         </div>
                         <ul className="space-y-1">
                           {category.subcategories.map((sub, subIndex) => (
@@ -185,14 +185,6 @@ export default function Header() {
                         </ul>
                       </div>
                     ))}
-                  </div>
-                  <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 rounded-b-lg">
-                    <div className="flex justify-between items-center">
-                      <span className="font-pixel text-sm text-gray-600">🎯 WSZYSTKIE KATEGORIE</span>
-                      <Button className="mario-button text-white px-4 py-2 font-pixel text-xs">
-                        POKAŻ WSZYSTKO
-                      </Button>
-                    </div>
                   </div>
                 </div>
               )}
