@@ -2,25 +2,52 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroBanner() {
   return (
-    <section className="gradient-mario py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="gradient-mario py-16 relative overflow-hidden">
+      {/* Mario-themed background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 text-6xl animate-bounce">🍄</div>
+        <div className="absolute top-20 right-20 text-4xl animate-pulse">⭐</div>
+        <div className="absolute bottom-20 left-1/4 text-5xl animate-bounce">🪙</div>
+        <div className="absolute top-1/3 right-1/3 text-3xl animate-pulse">🌸</div>
+        <div className="absolute bottom-10 right-10 text-6xl animate-bounce">🏰</div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
+            <div className="mb-6">
+              <span className="font-pixel text-coin-yellow text-xl bg-mario-red px-4 py-2 border-3 border-pixel-black mb-4 inline-block animate-pulse">
+                🏆 WORLD 1-1
+              </span>
+            </div>
             <h1 className="font-pixel text-white text-4xl lg:text-6xl mb-6 leading-tight text-shadow-pixel">
-              POWRÓT DO<br />
-              <span className="text-coin-yellow">RETRO GIER!</span>
+              IT'S-A ME,<br />
+              <span className="text-coin-yellow animate-bounce inline-block">RETRO!</span>
             </h1>
-            <p className="text-white text-lg mb-8 font-medium">
-              Odkryj nostalgiczne światy klasycznych gier! Konsole Nintendo, Sega, PlayStation i wiele więcej. 
-              Najlepsza jakość, oryginalne produkty, szybka dostawa.
+            <p className="text-white text-lg mb-8 font-medium bg-pixel-black/20 p-4 border-l-4 border-coin-yellow">
+              🎮 Wejdź do magicznego świata retro gier! <br />
+              🏰 Przygoda zaczyna się tutaj - konsole Nintendo, Sega i PlayStation. <br />
+              💰 Zbieraj punkty i monety za każdy zakup!
             </p>
-            <div className="flex space-x-4">
-              <Button className="mario-button text-white px-8 py-4 font-pixel text-lg hover:bg-mario-red">
-                🎮 ZOBACZ OFERTĘ
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button className="mario-button text-white px-8 py-4 font-pixel text-lg hover:bg-mario-red transform hover:scale-105 transition-transform">
+                🎮 START GAME!
               </Button>
-              <Button className="bg-coin-yellow text-pixel-black px-8 py-4 font-pixel text-lg mario-button hover:bg-coin-yellow">
-                💰 PROMOCJE -50%
+              <Button className="bg-coin-yellow text-pixel-black px-8 py-4 font-pixel text-lg mario-button hover:bg-coin-yellow transform hover:scale-105 transition-transform">
+                ⭐ POWER-UP -50%
               </Button>
+              <Button className="bg-pipe-green text-white px-8 py-4 font-pixel text-lg mario-button hover:bg-pipe-green transform hover:scale-105 transition-transform">
+                🍄 BONUS STAGE
+              </Button>
+            </div>
+            
+            {/* Mario-style status bar */}
+            <div className="mt-8 bg-pixel-black text-white p-4 font-pixel text-sm border-3 border-white">
+              <div className="grid grid-cols-3 gap-4">
+                <div>MARIO<br /><span className="text-coin-yellow">🪙 000000</span></div>
+                <div className="text-center">WORLD<br /><span className="text-pipe-green">🌍 1-1</span></div>
+                <div className="text-right">TIME<br /><span className="text-mario-red">⏰ ∞</span></div>
+              </div>
             </div>
           </div>
           <div className="relative">

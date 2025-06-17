@@ -14,16 +14,34 @@ export default function Categories() {
         <h2 className="font-pixel text-3xl text-center mb-12 text-pixel-black">
           🎯 KATEGORIE PRODUKTÓW
         </h2>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {categories.map((category, index) => (
             <div 
               key={index}
-              className={`pixel-card p-6 text-center ${category.hoverColor} hover:text-white transition-all cursor-pointer`}
+              className={`pixel-card p-6 text-center group cursor-pointer transition-all duration-300 ${category.hoverColor} hover:transform hover:scale-105 relative overflow-hidden`}
             >
-              <div className="text-4xl mb-4">{category.icon}</div>
-              <h3 className="font-pixel text-sm mb-2">{category.name}</h3>
-              <p className="text-xs">{category.description}</p>
+              {/* Mario-style border decoration */}
+              <div className="absolute top-2 left-2 w-3 h-3 bg-coin-yellow border border-pixel-black"></div>
+              <div className="absolute top-2 right-2 w-3 h-3 bg-coin-yellow border border-pixel-black"></div>
+              <div className="absolute bottom-2 left-2 w-3 h-3 bg-coin-yellow border border-pixel-black"></div>
+              <div className="absolute bottom-2 right-2 w-3 h-3 bg-coin-yellow border border-pixel-black"></div>
+
+              <div className="text-5xl mb-4 mario-jump group-hover:power-up">{category.icon}</div>
+              <div className="font-pixel text-xs text-mario-blue mb-1 group-hover:text-white transition-colors">
+                {category.subtitle}
+              </div>
+              <h3 className="font-pixel text-lg mb-2 text-pixel-black group-hover:text-white transition-colors">
+                {category.name}
+              </h3>
+              <p className="text-gray-600 group-hover:text-gray-200 transition-colors font-medium">
+                {category.description}
+              </p>
+
+              {/* Mario-style coin indicator */}
+              <div className="mt-4 flex justify-center">
+                <span className="text-coin-yellow coin-spin group-hover:text-white transition-colors">🪙</span>
+              </div>
             </div>
           ))}
         </div>
