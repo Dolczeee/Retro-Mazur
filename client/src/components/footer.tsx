@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <img 
-              src="/retro-mazur-logo.png" 
+              src="/src/logo/Arcade 2.png" 
               alt="Retro Mazur Logo" 
               className="h-18 w-auto mb-4 object-contain"
             />

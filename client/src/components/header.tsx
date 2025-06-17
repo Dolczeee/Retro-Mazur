@@ -26,7 +26,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/retro-mazur-logo.png" 
+              src="/src/logo/Arcade 2.png" 
               alt="Retro Mazur Logo" 
               className="h-20 w-auto mr-4 object-contain"
             />
