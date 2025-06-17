@@ -169,7 +169,7 @@ export default function Header() {
                       <div key={index} className="space-y-3">
                         <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
                           <span className="text-2xl">{category.icon}</span>
-                          <h3 className="font-pixel text-sm text-mario-red font-bold">{category.title}</h3>
+                          <h3 className="font-pixel text-sm text-gray-800 font-bold">{category.title}</h3>
                         </div>
                         <ul className="space-y-1">
                           {category.subcategories.map((sub, subIndex) => (
