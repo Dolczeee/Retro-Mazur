@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -233,16 +234,30 @@ export default function Header() {
     }
   ];
 
+  const closeAllMenus = () => {
+    setShowCategories(false);
+    setShowBrands(false);
+    setShowPromotions(false);
+  };
+
   return (
-    <header className="bg-white shadow-lg border-b-4 border-pixel-black">
+    <header className="bg-white shadow-lg border-b-4 border-pixel-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex justify-between items-center py-2 text-sm border-b border-gray-200">
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Koszty dostawy</a>
-            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Reklamacje i zwroty</a>
-            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Blog</a>
-            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Kontakt</a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">
+              Koszty dostawy
+            </a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">
+              Reklamacje i zwroty
+            </a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">
+              Blog
+            </a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">
+              Kontakt
+            </a>
           </div>
           <div className="flex items-center space-x-4">
             <select className="text-sm border-none bg-transparent">
@@ -288,42 +303,42 @@ export default function Header() {
             </Button>
             <Button className="bg-coin-yellow text-pixel-black p-3 rounded-full hover:bg-yellow-500 transition-colors relative">
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-2 -right-2 bg-mario-red text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">3</span>
+              <span className="absolute -top-2 -right-2 bg-mario-red text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+                3
+              </span>
             </Button>
           </div>
         </div>
       </div>
 
       {/* Navigation Menu */}
-      <nav className="bg-pixel-black text-white relative z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav className="bg-pixel-black text-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-3">
-            <div className="flex items-center space-x-8">
+            {/* Left side - Categories */}
+            <div className="flex items-center">
               <div 
                 className="relative"
                 onMouseEnter={() => setShowCategories(true)}
                 onMouseLeave={() => setShowCategories(false)}
               >
-                <Button 
-                  className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green"
-                >
-                  <Menu className="w-4 h-4 mr-2" /> KATEGORIE
+                <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
+                  <Menu className="w-4 h-4 mr-2" /> 
+                  KATEGORIE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Categories Dropdown */}
                 {showCategories && (
-                  <div 
-                    className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1000px]"
-                    onMouseEnter={() => setShowCategories(true)}
-                    onMouseLeave={() => setShowCategories(false)}
-                  >
-                        <div className="grid grid-cols-6 gap-6 p-6">
+                  <div className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1000px]">
+                    <div className="grid grid-cols-6 gap-6 p-6">
                       {categories.map((category, index) => (
                         <div key={index} className="space-y-3">
                           <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
                             <span className="text-2xl">{category.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">{category.title}</h3>
+                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                              {category.title}
+                            </h3>
                           </div>
                           <ul className="space-y-1">
                             {category.subcategories.map((sub, subIndex) => (
@@ -344,32 +359,31 @@ export default function Header() {
                 )}
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+
+            {/* Right side - Brands and Promotions */}
+            <div className="flex items-center space-x-6">
+              {/* Brands Menu */}
               <div 
                 className="relative"
                 onMouseEnter={() => setShowBrands(true)}
                 onMouseLeave={() => setShowBrands(false)}
               >
-                <Button 
-                  className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center"
-                >
+                <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   🏷️ MARKI
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showBrands ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Brands Dropdown */}
                 {showBrands && (
-                  <div 
-                    className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1000px]"
-                    onMouseEnter={() => setShowBrands(true)}
-                    onMouseLeave={() => setShowBrands(false)}
-                  >
+                  <div className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1000px]">
                     <div className="grid grid-cols-6 gap-6 p-6">
                       {brands.map((brand, index) => (
                         <div key={index} className="space-y-3">
                           <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
                             <span className="text-2xl">{brand.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">{brand.title}</h3>
+                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                              {brand.title}
+                            </h3>
                           </div>
                           <ul className="space-y-1">
                             {brand.subcategories.map((sub, subIndex) => (
@@ -390,32 +404,29 @@ export default function Header() {
                 )}
               </div>
 
+              {/* Promotions Menu */}
               <div 
                 className="relative"
                 onMouseEnter={() => setShowPromotions(true)}
                 onMouseLeave={() => setShowPromotions(false)}
               >
-                <Button 
-                  className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center"
-                >
+                <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   ⭐ PROMOCJE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showPromotions ? 'rotate-180' : ''}`} />
                 </Button>
 
                 {/* Promotions Dropdown */}
                 {showPromotions && (
-                  <div 
-                    className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1200px]"
-                    onMouseEnter={() => setShowPromotions(true)}
-                    onMouseLeave={() => setShowPromotions(false)}
-                  >
+                  <div className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1200px]">
                     <div className="grid grid-cols-4 gap-6 p-6">
                       {promotions.map((promo, index) => (
                         <div key={index} className="space-y-3">
                           <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
                             <div className="flex items-center space-x-2">
                               <span className="text-2xl">{promo.icon}</span>
-                              <h3 className="font-pixel text-sm text-gray-800 font-bold">{promo.title}</h3>
+                              <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                                {promo.title}
+                              </h3>
                             </div>
                             <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
                               {promo.badge}
@@ -460,19 +471,15 @@ export default function Header() {
             </div>
           </div>
         </div>
+      </nav>
 
-{/* Overlay to close dropdowns */}
+      {/* Overlay to close dropdowns when clicking outside */}
       {(showCategories || showBrands || showPromotions) && (
         <div 
-          className="fixed inset-0 z-[9998]" 
-          onClick={() => {
-            setShowCategories(false);
-            setShowBrands(false);
-            setShowPromotions(false);
-          }}
+          className="fixed inset-0 z-[99]" 
+          onClick={closeAllMenus}
         />
       )}
-      </nav>
     </header>
   );
 }
