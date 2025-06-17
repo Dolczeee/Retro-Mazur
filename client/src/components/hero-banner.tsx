@@ -5,7 +5,7 @@ export default function HeroBanner() {
   return (
     <section className="relative py-16 px-4 overflow-hidden" style={{
       backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
-      backgroundSize: '400px auto',
+      backgroundSize: '970px auto',
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat-x'
     }}>
