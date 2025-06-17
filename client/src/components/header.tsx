@@ -15,8 +15,6 @@ export default function Header() {
             <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Kontakt</a>
           </div>
           <div className="flex items-center space-x-4">
-            <span className="text-gray-600">📧 info@retromazur.pl</span>
-            <span className="text-gray-600">📞 +48 123 456 789</span>
             <select className="text-sm border-none bg-transparent">
               <option>Polski</option>
               <option>English</option>
