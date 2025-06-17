@@ -43,22 +43,22 @@ export default function Categories() {
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-16 left-16 w-28 h-18"
+          className="absolute top-16 left-16 w-16 h-10"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-24 right-24 w-32 h-20"
+          className="absolute top-24 right-24 w-18 h-11"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute bottom-24 left-1/3 w-36 h-22"
+          className="absolute bottom-24 left-1/3 w-20 h-12"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute bottom-32 right-16 w-30 h-19"
+          className="absolute bottom-32 right-16 w-16 h-10"
         />
       </div>
 
