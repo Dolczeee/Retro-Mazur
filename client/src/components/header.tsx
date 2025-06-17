@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function Header() {
   const [showCategories, setShowCategories] = useState(false);
+  const [showBrands, setShowBrands] = useState(false);
 
   const categories = [
     {
@@ -83,6 +84,87 @@ export default function Header() {
         "Zegarki z grami",
         "Gadżety retro",
         "Kolekcjonerskie"
+      ]
+    }
+  ];
+
+  const brands = [
+    {
+      icon: "🎮",
+      title: "NINTENDO",
+      subcategories: [
+        "Nintendo Entertainment System (NES)",
+        "Super Nintendo (SNES)",
+        "Nintendo 64 (N64)",
+        "GameCube",
+        "Nintendo Wii/Wii U",
+        "Game Boy/Game Boy Color",
+        "Nintendo DS/3DS",
+        "Nintendo Switch"
+      ]
+    },
+    {
+      icon: "🔵",
+      title: "SEGA",
+      subcategories: [
+        "Sega Master System",
+        "Sega Genesis/Mega Drive",
+        "Sega Saturn",
+        "Sega Dreamcast",
+        "Game Gear",
+        "Sega CD/32X",
+        "Sega Nomad"
+      ]
+    },
+    {
+      icon: "🎯",
+      title: "SONY",
+      subcategories: [
+        "PlayStation 1 (PSX)",
+        "PlayStation 2 (PS2)",
+        "PlayStation 3 (PS3)",
+        "PlayStation 4 (PS4)",
+        "PlayStation 5 (PS5)",
+        "PlayStation Portable (PSP)",
+        "PlayStation Vita (PS Vita)"
+      ]
+    },
+    {
+      icon: "🕹️",
+      title: "ATARI",
+      subcategories: [
+        "Atari 2600",
+        "Atari 5200",
+        "Atari 7800",
+        "Atari Jaguar",
+        "Atari Lynx",
+        "Atari ST",
+        "Atari 8-bit"
+      ]
+    },
+    {
+      icon: "💻",
+      title: "COMMODORE",
+      subcategories: [
+        "Commodore 64 (C64)",
+        "Commodore 128",
+        "Amiga 500/600/1200",
+        "Amiga CD32",
+        "VIC-20",
+        "Commodore PET",
+        "Plus/4"
+      ]
+    },
+    {
+      icon: "⚡",
+      title: "SNK",
+      subcategories: [
+        "Neo Geo AES",
+        "Neo Geo MVS",
+        "Neo Geo CD",
+        "Neo Geo Pocket",
+        "Neo Geo Pocket Color",
+        "Neo Geo X"
       ]
     }
   ];
@@ -189,18 +271,56 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-coin-yellow font-pixel text-sm">🏷️ MARKI</span>
+            <div className="flex items-center space-x-4 relative">
+              <Button 
+                className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center relative"
+                onClick={() => setShowBrands(!showBrands)}
+              >
+                🏷️ MARKI
+                <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showBrands ? 'rotate-180' : ''}`} />
+              </Button>
+
+              {/* Brands Dropdown */}
+              {showBrands && (
+                <div className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50 min-w-[800px]">
+                  <div className="grid grid-cols-3 gap-6 p-6">
+                    {brands.map((brand, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                          <span className="text-2xl">{brand.icon}</span>
+                          <h3 className="font-pixel text-sm text-gray-800 font-bold">{brand.title}</h3>
+                        </div>
+                        <ul className="space-y-1">
+                          {brand.subcategories.map((sub, subIndex) => (
+                            <li key={subIndex}>
+                              <a 
+                                href="#" 
+                                className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                              >
+                                {sub}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <span className="text-coin-yellow font-pixel text-sm">⭐ PROMOCJE</span>
             </div>
           </div>
         </div>
 
-        {/* Overlay to close dropdown */}
-        {showCategories && (
+        {/* Overlay to close dropdowns */}
+        {(showCategories || showBrands) && (
           <div 
             className="fixed inset-0 z-40" 
-            onClick={() => setShowCategories(false)}
+            onClick={() => {
+              setShowCategories(false);
+              setShowBrands(false);
+            }}
           />
         )}
       </nav>
