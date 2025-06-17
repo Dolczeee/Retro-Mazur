@@ -176,7 +176,7 @@ export default function Header() {
                             <li key={subIndex}>
                               <a 
                                 href="#" 
-                                className="text-gray-700 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors"
+                                className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
                               >
                                 {sub}
                               </a>
