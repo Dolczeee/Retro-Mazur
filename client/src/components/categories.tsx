@@ -9,7 +9,12 @@ export default function Categories() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16" style={{
+      backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
+      backgroundSize: '970px auto',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'repeat-x'
+    }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-pixel text-3xl text-center mb-12 text-pixel-black">
           🎯 KATEGORIE PRODUKTÓW
