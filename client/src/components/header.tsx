@@ -188,7 +188,7 @@ export default function Header() {
             <span className="text-gray-600">PLN</span>
           </div>
         </div>
-        
+
         {/* Main Header */}
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -199,7 +199,7 @@ export default function Header() {
               className="h-20 w-auto mr-4 object-contain"
             />
           </div>
-          
+
           {/* Search Bar */}
           <div className="flex-1 max-w-2xl mx-8">
             <div className="relative flex">
@@ -213,7 +213,7 @@ export default function Header() {
               </Button>
             </div>
           </div>
-          
+
           {/* User Actions */}
           <div className="flex items-center space-x-4">
             <Button className="bg-mario-blue text-white p-3 rounded-full hover:bg-blue-700 transition-colors">
@@ -229,7 +229,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      
+
       {/* Navigation Menu */}
       <nav className="bg-pixel-black text-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -237,7 +237,8 @@ export default function Header() {
             <div className="flex items-center space-x-8">
               <Button 
                 className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green"
-                onClick={() => setShowCategories(!showCategories)}
+                onMouseEnter={() => setShowCategories(true)}
+                onMouseLeave={() => setShowCategories(false)}
               >
                 <Menu className="w-4 h-4 mr-2" /> KATEGORIE
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
@@ -246,7 +247,8 @@ export default function Header() {
             <div className="flex items-center space-x-4">
               <Button 
                 className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center"
-                onClick={() => setShowBrands(!showBrands)}
+                onMouseEnter={() => setShowBrands(true)}
+                onMouseLeave={() => setShowBrands(false)}
               >
                 🏷️ MARKI
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showBrands ? 'rotate-180' : ''}`} />
@@ -258,7 +260,11 @@ export default function Header() {
 
           {/* Categories Dropdown */}
           {showCategories && (
-            <div className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50">
+            <div 
+              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50"
+              onMouseEnter={() => setShowCategories(true)}
+              onMouseLeave={() => setShowCategories(false)}
+            >
               <div className="grid grid-cols-6 gap-6 p-6">
                 {categories.map((category, index) => (
                   <div key={index} className="space-y-3">
@@ -286,7 +292,11 @@ export default function Header() {
 
           {/* Brands Dropdown */}
           {showBrands && (
-            <div className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50">
+            <div 
+              className="absolute top-full left-4 right-4 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50"
+              onMouseEnter={() => setShowBrands(true)}
+              onMouseLeave={() => setShowBrands(false)}
+            >
               <div className="grid grid-cols-6 gap-6 p-6">
                 {brands.map((brand, index) => (
                   <div key={index} className="space-y-3">
