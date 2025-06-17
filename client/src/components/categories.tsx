@@ -41,9 +41,26 @@ export default function Categories() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-8">
-          <p className="font-pixel text-sm text-white/80 mb-2 tracking-wide">
-            🌍 WYBIERZ SWÓJ ŚWIAT
+        <div className="text-center mb-12">
+          <div className="relative inline-block mb-6">
+            {/* Background block like in Mario */}
+            <div className="bg-coin-yellow border-4 border-pixel-black px-8 py-4 transform rotate-1 absolute -inset-2"></div>
+            <div className="bg-mario-red border-4 border-pixel-black px-8 py-4 relative">
+              <h2 className="font-pixel text-2xl lg:text-3xl text-white text-shadow-pixel tracking-wider">
+                🌍 WYBIERZ SWÓJ ŚWIAT
+              </h2>
+            </div>
+          </div>
+          
+          {/* Mario-style decorative elements */}
+          <div className="flex justify-center items-center space-x-4 mb-4">
+            <div className="w-8 h-8 bg-coin-yellow border-2 border-pixel-black coin-spin"></div>
+            <div className="font-pixel text-white text-lg">★ ★ ★</div>
+            <div className="w-8 h-8 bg-coin-yellow border-2 border-pixel-black coin-spin"></div>
+          </div>
+          
+          <p className="font-pixel text-white/90 text-sm tracking-wide">
+            PRZYGODA ZACZYNA SIĘ TUTAJ!
           </p>
         </div>
 
