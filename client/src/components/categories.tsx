@@ -39,13 +39,6 @@ export default function Categories() {
 
   return (
     <section className="py-16 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 text-8xl">🌊</div>
-        <div className="absolute top-20 right-20 text-6xl">☁️</div>
-        <div className="absolute bottom-20 left-1/4 text-7xl">🌱</div>
-        <div className="absolute bottom-10 right-10 text-5xl">🍄</div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
