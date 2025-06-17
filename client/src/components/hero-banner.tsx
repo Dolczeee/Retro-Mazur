@@ -9,17 +9,27 @@ export default function HeroBanner() {
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-12 left-12 w-14 h-9"
+          className="absolute top-12 left-12 w-18 h-12"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-32 right-20 w-16 h-10"
+          className="absolute top-32 right-20 w-20 h-13"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute bottom-20 left-1/4 w-18 h-11"
+          className="absolute bottom-20 left-1/4 w-22 h-14"
+        />
+        <img 
+          src="/src/pixel SVG/chmurka.svg" 
+          alt="" 
+          className="absolute top-1/2 right-1/2 w-16 h-10"
+        />
+        <img 
+          src="/src/pixel SVG/chmurka.svg" 
+          alt="" 
+          className="absolute bottom-1/3 right-12 w-19 h-12"
         />
       </div>
       
