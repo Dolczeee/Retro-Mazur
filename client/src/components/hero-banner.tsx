@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Clock } from "lucide-react";
 
@@ -10,14 +11,14 @@ export default function HeroBanner() {
       backgroundRepeat: 'repeat-x'
     }}>
       <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          {/* Main banner - left side (larger like fishing store) */}
-          <div className="lg:col-span-3">
-            <div className="relative overflow-hidden rounded-lg" style={{width: '840px', height: '316px'}}>
+        <div className="flex gap-6">
+          {/* Main banner - left side */}
+          <div className="flex-shrink-0">
+            <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-black/70 to-transparent" style={{width: '840px', height: '316px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=500"
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=840&h=316"
                 alt="Retro gaming collection"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover absolute inset-0"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent">
                 <div className="absolute bottom-8 left-8 text-white">
@@ -42,29 +43,36 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          {/* Right sidebar - similar to fishing store */}
-          <div className="lg:col-span-2 space-y-4">
-            {/* Quick promo banner */}
+          {/* Right sidebar */}
+          <div className="flex-shrink-0 space-y-4">
+            {/* First small banner */}
             <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-mario-blue to-pipe-green" style={{width: '265px', height: '148px'}}>
-              <div className="absolute inset-0 p-6 text-white">
-                <h3 className="font-pixel text-xl mb-3 text-shadow-pixel">
-                  🕹️ Game Boy Fever
-                </h3>
-                <p className="text-sm mb-4 opacity-90">
-                  Portable retro w super cenach
-                </p>
-                <Button className="mario-button bg-coin-yellow text-pixel-black px-4 py-2 font-pixel hover:bg-coin-yellow text-sm">
-                  SPRAWDŹ →
-                </Button>
+              <img 
+                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=265&h=148"
+                alt="Game Boy collection"
+                className="w-full h-full object-cover absolute inset-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-pixel text-lg mb-2 text-shadow-pixel">
+                    🕹️ Game Boy Fever
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    Portable retro w super cenach
+                  </p>
+                  <Button className="mario-button bg-coin-yellow text-pixel-black px-3 py-1 font-pixel hover:bg-coin-yellow text-xs mt-2">
+                    SPRAWDŹ →
+                  </Button>
+                </div>
               </div>
             </div>
 
-            {/* Second promo */}
+            {/* Second small banner */}
             <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-pipe-green to-mario-blue" style={{width: '265px', height: '148px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250"
+                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=265&h=148"
                 alt="PlayStation collection"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover absolute inset-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
                 <div className="absolute bottom-4 left-4 text-white">
