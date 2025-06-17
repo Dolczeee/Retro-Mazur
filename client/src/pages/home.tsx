@@ -18,25 +18,12 @@ export default function Home() {
       <main>
         <div className="bg-mario-blue" style={{
           backgroundImage: `
-            linear-gradient(to bottom, #87ceeb 0%, #6bb6ff 25%, #4682b4 75%, #1e90ff 100%),
-            repeating-linear-gradient(
-              0deg,
-              transparent,
-              transparent 2px,
-              rgba(255,255,255,0.1) 2px,
-              rgba(255,255,255,0.1) 4px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              transparent,
-              transparent 8px,
-              rgba(255,255,255,0.05) 8px,
-              rgba(255,255,255,0.05) 16px
-            )
+            linear-gradient(to bottom, #42c1f2 0%, #42c1f2 33.33%, #64c8ee 33.33%, #64c8ee 66.66%, #84d0f0 66.66%, #84d0f0 100%),
+            url('/pixel SVG/tło niebieskie.svg')
           `,
-          backgroundSize: '100% 100%, 16px 16px, 16px 16px',
-          backgroundPosition: '0 0, 0 0, 0 0',
-          imageRendering: 'pixelated'
+          backgroundSize: '100% 100%, cover',
+          backgroundPosition: 'center, center',
+          backgroundRepeat: 'no-repeat, repeat'
         }}>
           <HeroBanner />
           <Categories />
