@@ -8,11 +8,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex justify-between items-center py-2 text-sm border-b border-gray-200">
-          <div className="flex space-x-4">
-            <span className="text-gray-600">📧 info@retromazur.pl</span>
-            <span className="text-gray-600">📞 +48 123 456 789</span>
+          <div className="flex space-x-6">
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Koszty dostawy</a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Reklamacje i zwroty</a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Blog</a>
+            <a href="#" className="text-gray-600 hover:text-mario-blue transition-colors">Kontakt</a>
           </div>
           <div className="flex items-center space-x-4">
+            <span className="text-gray-600">📧 info@retromazur.pl</span>
+            <span className="text-gray-600">📞 +48 123 456 789</span>
             <select className="text-sm border-none bg-transparent">
               <option>Polski</option>
               <option>English</option>
