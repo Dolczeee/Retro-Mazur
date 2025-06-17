@@ -1,0 +1,32 @@
+<div class="homeslider d-flex flex-wrap">
+    <div class="homeslider__col-lg">
+          <div class="js-homeslider swiper-custom bg-light position-relative swiper-initialized swiper-horizontal swiper-backface-hidden">
+    <ul class="swiper-wrapper homeslider__list" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                        
+                  
+                  
+                  <li class="swiper-slide homeslider__slide swiper-slide-active" data-title="Drapieżny tydzień" style="width: 840px;" data-swiper-slide-index="0">
+                      <a href="https://sklepdrapieznik.pl/content/26-drapiezne-promocje">
+                                  <img class="img-fluid w-100" src="https://sklepdrapieznik.pl/modules/is_imageslider/img/05bda3cd486b1ea8234289b39ae04d30.png" alt="" width="2452" height="920">
+                            </a>
+          
+                              <div class="homeslider__caption ">
+                  <p class="homeslider__title  mb-xl-0"></p>
+
+                  <div class="homeslider__description d-none d-lg-block"></div>
+                                  </div>
+            
+          </li><li class="swiper-slide homeslider__slide swiper-slide-next" data-title="Woblery boleniowe" style="width: 840px;" data-swiper-slide-index="1">
+                      <a href="https://sklepdrapieznik.pl/4133-woblery-boleniowe">
+                                  <img class="img-fluid homeslider__img w-100" src="https://sklepdrapieznik.pl/modules/is_imageslider/img/006c26039136a93a932c68f4120088d3.jpeg" alt="" width="2452" height="920" loading="lazy">
+                            </a>
+          
+                              <div class="homeslider__caption ">
+                  <p class="homeslider__title  mb-xl-0"></p>
+
+                  <div class="homeslider__description d-none d-lg-block"></div>
+                                  </div>
+            
+          </li><li class="swiper-slide homeslider__slide" data-title="Westin Promocja" data-swiper-slide-index="2" style="width: 840px;">
+                      <a href="https://sklepdrapieznik.pl/brand/114-westin?kategorie=wedki">
+                                  <img class="img-fluid homeslider__img w-100" src="https://sklepdrapieznik.pl/modules/is_imageslider/img/4fe9b897b7cc6471ee1d750dab7cf949.jpeg" alt="" width="2452" height="920" loading="lazy">
