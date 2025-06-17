@@ -13,9 +13,9 @@ export default function HeroBanner() {
         <div className="flex gap-6">
           {/* Main banner - left side */}
           <div className="flex-shrink-0">
-            <div className="relative overflow-hidden rounded-lg" style={{width: '1000px', height: '500px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '1000px', height: '400px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=500"
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=400"
                 alt="Vintage gaming collection"
                 className="w-full h-full object-cover"
               />
@@ -45,9 +45,9 @@ export default function HeroBanner() {
           {/* Right sidebar */}
           <div className="flex-shrink-0 space-y-4">
             {/* First small banner */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '240px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '190px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=240"
+                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=190"
                 alt="Konsole przenośne"
                 className="w-full h-full object-cover"
               />
@@ -67,9 +67,9 @@ export default function HeroBanner() {
             </div>
 
             {/* Second small banner */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '240px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '190px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=240"
+                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=190"
                 alt="Akcesoria retro"
                 className="w-full h-full object-cover"
               />
