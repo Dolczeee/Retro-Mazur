@@ -1,11 +1,12 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const categories = [
     {
@@ -233,11 +234,31 @@ export default function Header() {
   ];
 
   const openMenu = (menuName: string) => {
+    // Clear any existing timeout
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
     setActiveMenu(menuName);
   };
 
   const closeMenu = () => {
-    setActiveMenu(null);
+    // Add small delay before closing to prevent flickering
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    
+    hoverTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(null);
+    }, 150); // 150ms delay
+  };
+
+  const cancelClose = () => {
+    // Cancel the close timeout when re-entering
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
   };
 
   return (
@@ -332,7 +353,7 @@ export default function Header() {
                 {activeMenu === 'categories' && (
                   <div 
                     className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-                    onMouseEnter={() => openMenu('categories')}
+                    onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
                     <div className="grid grid-cols-6 gap-6 p-6">
@@ -381,7 +402,7 @@ export default function Header() {
                 {activeMenu === 'brands' && (
                   <div 
                     className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-                    onMouseEnter={() => openMenu('brands')}
+                    onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
                     <div className="grid grid-cols-6 gap-6 p-6">
@@ -427,7 +448,7 @@ export default function Header() {
                 {activeMenu === 'promotions' && (
                   <div 
                     className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-                    onMouseEnter={() => openMenu('promotions')}
+                    onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
                     <div className="grid grid-cols-4 gap-6 p-6">
@@ -489,7 +510,13 @@ export default function Header() {
       {activeMenu && (
         <div 
           className="fixed inset-0 z-[99]" 
-          onClick={closeMenu}
+          onClick={() => {
+            if (hoverTimeoutRef.current) {
+              clearTimeout(hoverTimeoutRef.current);
+              hoverTimeoutRef.current = null;
+            }
+            setActiveMenu(null);
+          }}
         />
       )}
     </header>
