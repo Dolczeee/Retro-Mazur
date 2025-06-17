@@ -23,7 +23,7 @@
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
-  
+
   /* Mario-inspired retro colors */
   --mario-red: hsl(351, 83%, 54%);
   --mario-blue: hsl(209, 89%, 45%);
@@ -72,51 +72,51 @@
   .font-pixel {
     font-family: 'Press Start 2P', cursive;
   }
-  
+
   .mario-red {
     color: var(--mario-red);
   }
-  
+
   .bg-mario-red {
     background-color: var(--mario-red);
   }
-  
+
   .mario-blue {
     color: var(--mario-blue);
   }
-  
+
   .bg-mario-blue {
     background-color: var(--mario-blue);
   }
-  
+
   .coin-yellow {
     color: var(--coin-yellow);
   }
-  
+
   .bg-coin-yellow {
     background-color: var(--coin-yellow);
   }
-  
+
   .pipe-green {
     color: var(--pipe-green);
   }
-  
+
   .bg-pipe-green {
     background-color: var(--pipe-green);
   }
-  
+
   .retro-beige {
     color: var(--retro-beige);
   }
-  
+
   .bg-retro-beige {
     background-color: var(--retro-beige);
   }
-  
+
   .pixel-black {
     color: var(--pixel-black);
   }
-  
+
   .bg-pixel-black {
     background-color: var(--pixel-black);
   }
