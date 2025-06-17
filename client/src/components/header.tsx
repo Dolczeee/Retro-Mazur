@@ -246,12 +246,37 @@ export default function Header() {
                   <Menu className="w-4 h-4 mr-2" /> KATEGORIE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
                 </Button>
-                
+
                 {/* Categories Dropdown */}
                 {showCategories && (
                   <div 
                     className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1000px]"
-                  ></div>
+                    onMouseEnter={() => setShowCategories(true)}
+                    onMouseLeave={() => setShowCategories(false)}
+                  >
+                        <div className="grid grid-cols-6 gap-6 p-6">
+                      {categories.map((category, index) => (
+                        <div key={index} className="space-y-3">
+                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                            <span className="text-2xl">{category.icon}</span>
+                            <h3 className="font-pixel text-sm text-gray-800 font-bold">{category.title}</h3>
+                          </div>
+                          <ul className="space-y-1">
+                            {category.subcategories.map((sub, subIndex) => (
+                              <li key={subIndex}>
+                                <a 
+                                  href="#" 
+                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                                >
+                                  {sub}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
@@ -272,7 +297,32 @@ export default function Header() {
                 {showBrands && (
                   <div 
                     className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1000px]"
-                  ></div>
+                    onMouseEnter={() => setShowBrands(true)}
+                    onMouseLeave={() => setShowBrands(false)}
+                  >
+                    <div className="grid grid-cols-6 gap-6 p-6">
+                      {brands.map((brand, index) => (
+                        <div key={index} className="space-y-3">
+                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                            <span className="text-2xl">{brand.icon}</span>
+                            <h3 className="font-pixel text-sm text-gray-800 font-bold">{brand.title}</h3>
+                          </div>
+                          <ul className="space-y-1">
+                            {brand.subcategories.map((sub, subIndex) => (
+                              <li key={subIndex}>
+                                <a 
+                                  href="#" 
+                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                                >
+                                  {sub}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
 
@@ -280,71 +330,18 @@ export default function Header() {
             </div>
           </div>
         </div>
+
+{/* Overlay to close dropdowns */}
+      {(showCategories || showBrands) && (
+        <div 
+          className="fixed inset-0 z-[9998]" 
+          onClick={() => {
+            setShowCategories(false);
+            setShowBrands(false);
+          }}
+        />
+      )}
       </nav>
-
-      {/* Categories Dropdown Content */}
-      {showCategories && (
-        <div 
-          className="fixed top-[180px] left-1/2 transform -translate-x-1/2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] max-w-7xl w-full mx-4"
-          onMouseEnter={() => setShowCategories(true)}
-          onMouseLeave={() => setShowCategories(false)}
-        >
-              <div className="grid grid-cols-6 gap-6 p-6">
-            {categories.map((category, index) => (
-              <div key={index} className="space-y-3">
-                <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                  <span className="text-2xl">{category.icon}</span>
-                  <h3 className="font-pixel text-sm text-gray-800 font-bold">{category.title}</h3>
-                </div>
-                <ul className="space-y-1">
-                  {category.subcategories.map((sub, subIndex) => (
-                    <li key={subIndex}>
-                      <a 
-                        href="#" 
-                        className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                      >
-                        {sub}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Brands Dropdown Content */}
-      {showBrands && (
-        <div 
-          className="fixed top-[180px] left-1/2 transform -translate-x-1/2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] max-w-7xl w-full mx-4"
-          onMouseEnter={() => setShowBrands(true)}
-          onMouseLeave={() => setShowBrands(false)}
-        >
-          <div className="grid grid-cols-6 gap-6 p-6">
-            {brands.map((brand, index) => (
-              <div key={index} className="space-y-3">
-                <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                  <span className="text-2xl">{brand.icon}</span>
-                  <h3 className="font-pixel text-sm text-gray-800 font-bold">{brand.title}</h3>
-                </div>
-                <ul className="space-y-1">
-                  {brand.subcategories.map((sub, subIndex) => (
-                    <li key={subIndex}>
-                      <a 
-                        href="#" 
-                        className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                      >
-                        {sub}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 }
