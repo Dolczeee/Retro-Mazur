@@ -353,6 +353,7 @@ export default function Header() {
                 {activeMenu === 'categories' && (
                   <div 
                     className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    style={{ left: '50%', marginLeft: '-600px' }}
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -401,7 +402,8 @@ export default function Header() {
                 {/* Brands Dropdown */}
                 {activeMenu === 'brands' && (
                   <div 
-                    className="absolute top-full right-0 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    style={{ left: '50%', marginLeft: '-600px' }}
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -447,7 +449,8 @@ export default function Header() {
                 {/* Promotions Dropdown */}
                 {activeMenu === 'promotions' && (
                   <div 
-                    className="absolute top-full right-0 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+                    style={{ left: '50%', marginLeft: '-600px' }}
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
