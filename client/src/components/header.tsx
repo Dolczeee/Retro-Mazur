@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 export default function Header() {
   const [showCategories, setShowCategories] = useState(false);
   const [showBrands, setShowBrands] = useState(false);
+  const [showPromotions, setShowPromotions] = useState(false);
 
   const categories = [
     {
@@ -169,6 +170,69 @@ export default function Header() {
     }
   ];
 
+  const promotions = [
+    {
+      icon: "💰",
+      title: "PROMOCJE CENOWE",
+      badge: "HOT!",
+      badgeColor: "bg-mario-red",
+      subcategories: [
+        "-60% na Guzra Combo Pack 🎮",
+        "-16% Cannibal Shad Fishy 🐟",
+        "-25% Super Mario Bros. NES 🍄",
+        "-30% Zelda: Link's Awakening 🗡️",
+        "-40% Sonic Genesis Collection 💨",
+        "-50% Street Fighter Alpha 👊",
+        "-35% Mega Man X Series 🤖"
+      ]
+    },
+    {
+      icon: "⏰",
+      title: "AKCJE PROMOCYJNE",
+      badge: "LIMITED",
+      badgeColor: "bg-pipe-green",
+      subcategories: [
+        "-15% Dalwa Classic Pack 📦",
+        "-10% Guru Master Edition 🧘",
+        "-20% Savage Gear Bundle 🎣",
+        "-15% Match Pro Controller 🎮",
+        "-25% Retgers Arcade Stick 🕹️",
+        "Kup 2, zapłać za 1 - Gry NES 🎁",
+        "Darmowa dostawa od 199 zł 🚚"
+      ]
+    },
+    {
+      icon: "📅",
+      title: "DRAPIEŻNY TYDZIEŃ",
+      badge: "7 DNI",
+      badgeColor: "bg-coin-yellow text-pixel-black",
+      subcategories: [
+        "Konsole PlayStation - 30% taniej 🎯",
+        "Pady Xbox - Buy 2 Get 1 Free 🎮",
+        "Gry Nintendo - Mega wyprzedaż 🎈",
+        "Akcesoria Retro - do 40% off ⚡",
+        "Kable HDMI - 2+1 gratis 📺",
+        "Cleaning Kity - 50% taniej 🧽",
+        "Mystery Box - Zestaw losowy 🎁"
+      ]
+    },
+    {
+      icon: "🏆",
+      title: "DRAPIEŻNE PROMOCJE",
+      badge: "EXTRA",
+      badgeColor: "bg-mario-blue",
+      subcategories: [
+        "Wędka Favorite Token + Gratisy (27) 🎣",
+        "Wędki Westin + Gratis Lures 🐟",
+        "Bagaż Westin M + Gratis Tools ⚙️",
+        "Multiplikatory Westin + Gratisy (6) 🎰",
+        "Zestaw Starter Pack - 70% off 📦",
+        "Vintage Console + 5 gier gratis 🕹️",
+        "Retro Gaming Chair + poduszka 🪑"
+      ]
+    }
+  ];
+
   return (
     <header className="bg-white shadow-lg border-b-4 border-pixel-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,18 +390,85 @@ export default function Header() {
                 )}
               </div>
 
-              <span className="text-coin-yellow font-pixel text-sm">⭐ PROMOCJE</span>
+              <div 
+                className="relative"
+                onMouseEnter={() => setShowPromotions(true)}
+                onMouseLeave={() => setShowPromotions(false)}
+              >
+                <Button 
+                  className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center"
+                >
+                  ⭐ PROMOCJE
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showPromotions ? 'rotate-180' : ''}`} />
+                </Button>
+
+                {/* Promotions Dropdown */}
+                {showPromotions && (
+                  <div 
+                    className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[99999] min-w-[1200px]"
+                    onMouseEnter={() => setShowPromotions(true)}
+                    onMouseLeave={() => setShowPromotions(false)}
+                  >
+                    <div className="grid grid-cols-4 gap-6 p-6">
+                      {promotions.map((promo, index) => (
+                        <div key={index} className="space-y-3">
+                          <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-2xl">{promo.icon}</span>
+                              <h3 className="font-pixel text-sm text-gray-800 font-bold">{promo.title}</h3>
+                            </div>
+                            <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
+                              {promo.badge}
+                            </span>
+                          </div>
+                          <ul className="space-y-1">
+                            {promo.subcategories.map((sub, subIndex) => (
+                              <li key={subIndex}>
+                                <a 
+                                  href="#" 
+                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                                >
+                                  {sub}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Special footer with extra offers */}
+                    <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
+                      <div className="grid grid-cols-3 gap-4 text-white text-center">
+                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                          🎮 WEEKLY SPECIAL<br/>
+                          <span className="text-coin-yellow">-70% RETRO PACK</span>
+                        </div>
+                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                          🏆 BOSS FIGHT<br/>
+                          <span className="text-coin-yellow">MEGA BUNDLE 99zł</span>
+                        </div>
+                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                          ⭐ POWER-UP<br/>
+                          <span className="text-coin-yellow">DARMOWA DOSTAWA</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
 {/* Overlay to close dropdowns */}
-      {(showCategories || showBrands) && (
+      {(showCategories || showBrands || showPromotions) && (
         <div 
           className="fixed inset-0 z-[9998]" 
           onClick={() => {
             setShowCategories(false);
             setShowBrands(false);
+            setShowPromotions(false);
           }}
         />
       )}
