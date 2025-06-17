@@ -86,39 +86,39 @@ export default function Categories() {
           
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 max-w-6xl mx-auto">
           {worlds.map((world, index) => (
             <div
               key={index}
-              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-3`}
+              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-2`}
             >
               {/* Top - World number */}
-              <div className="font-pixel text-[10px] text-coin-yellow mb-2 bg-pixel-black px-1.5 py-0.5 inline-block">
+              <div className="font-pixel text-[9px] text-coin-yellow mb-1 bg-pixel-black px-1 py-0.5 inline-block">
                 WORLD {world.world}
               </div>
               
-              <div className="flex items-center">
-                {/* Left - Icon */}
-                <div className="text-3xl power-up mr-4">
+              <div className="flex flex-col items-center text-center">
+                {/* Icon */}
+                <div className="text-2xl power-up mb-1">
                   {world.icon}
                 </div>
                 
-                {/* Middle - Name and Description */}
-                <div className="flex-grow">
-                  <h3 className="font-pixel text-sm mb-1">
+                {/* Name and Description */}
+                <div className="mb-2">
+                  <h3 className="font-pixel text-[10px] mb-1">
                     {world.name}
                   </h3>
-                  <p className="text-xs mb-1 opacity-90 leading-tight">
+                  <p className="text-[9px] opacity-90 leading-tight mb-1">
                     {world.description}
                   </p>
-                  <div className="font-pixel text-xs text-coin-yellow">
+                  <div className="font-pixel text-[8px] text-coin-yellow">
                     {world.items}
                   </div>
                 </div>
 
-                {/* Right - Enter button */}
-                <div className="flex-shrink-0 ml-4 opacity-70 group-hover:opacity-100 transition-opacity">
-                  <Button className="bg-coin-yellow text-pixel-black font-pixel text-xs px-4 py-2 mario-button">
+                {/* Enter button */}
+                <div className="opacity-70 group-hover:opacity-100 transition-opacity">
+                  <Button className="bg-coin-yellow text-pixel-black font-pixel text-[9px] px-2 py-1 mario-button">
                     ENTER →
                   </Button>
                 </div>
