@@ -18,38 +18,18 @@ export default function Home() {
       <main>
         <div className="bg-mario-blue" style={{
           backgroundImage: `
-            radial-gradient(circle at 5% 33%, #42c1f2 8px, transparent 8px),
-            radial-gradient(circle at 15% 33%, #42c1f2 6px, transparent 6px),
-            radial-gradient(circle at 25% 33%, #42c1f2 10px, transparent 10px),
-            radial-gradient(circle at 35% 33%, #42c1f2 7px, transparent 7px),
-            radial-gradient(circle at 45% 33%, #42c1f2 9px, transparent 9px),
-            radial-gradient(circle at 55% 33%, #42c1f2 8px, transparent 8px),
-            radial-gradient(circle at 65% 33%, #42c1f2 11px, transparent 11px),
-            radial-gradient(circle at 75% 33%, #42c1f2 6px, transparent 6px),
-            radial-gradient(circle at 85% 33%, #42c1f2 9px, transparent 9px),
-            radial-gradient(circle at 95% 33%, #42c1f2 7px, transparent 7px),
-            radial-gradient(circle at 8% 66%, #64c8ee 9px, transparent 9px),
-            radial-gradient(circle at 18% 66%, #64c8ee 7px, transparent 7px),
-            radial-gradient(circle at 28% 66%, #64c8ee 10px, transparent 10px),
-            radial-gradient(circle at 38% 66%, #64c8ee 8px, transparent 8px),
-            radial-gradient(circle at 48% 66%, #64c8ee 11px, transparent 11px),
-            radial-gradient(circle at 58% 66%, #64c8ee 6px, transparent 6px),
-            radial-gradient(circle at 68% 66%, #64c8ee 9px, transparent 9px),
-            radial-gradient(circle at 78% 66%, #64c8ee 8px, transparent 8px),
-            radial-gradient(circle at 88% 66%, #64c8ee 10px, transparent 10px),
-            radial-gradient(circle at 98% 66%, #64c8ee 7px, transparent 7px),
             linear-gradient(to bottom, 
               #42c1f2 0%, 
-              #42c1f2 32%, 
+              #42c1f2 33%, 
               #64c8ee 33%, 
-              #64c8ee 65%, 
+              #64c8ee 66%, 
               #84d0f0 66%, 
               #84d0f0 100%
             ),
             url('/pixel SVG/tło niebieskie.svg')
           `,
-          backgroundSize: 'cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, cover, 100% 100%, cover',
-          backgroundPosition: 'center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center, center',
+          backgroundSize: '100% 100%, cover',
+          backgroundPosition: 'center, center',
           backgroundRepeat: 'no-repeat',
           imageRendering: 'pixelated'
         }}>
