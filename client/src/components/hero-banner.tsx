@@ -5,44 +5,10 @@ export default function HeroBanner() {
   return (
     <section className="relative py-16 px-4 overflow-hidden" style={{
       backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
-      backgroundSize: 'cover',
+      backgroundSize: '400px auto',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'repeat-x'
     }}>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Small clouds */}
-        <div className="absolute top-6 left-8 opacity-70">
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-8 h-6" />
-        </div>
-        <div className="absolute top-12 right-16 opacity-60">
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-10 h-7" />
-        </div>
-        <div className="absolute top-20 left-1/3 opacity-50">
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-6 h-4" />
-        </div>
-
-        {/* Small question mark blocks */}
-        <div className="absolute top-16 right-1/4 opacity-80">
-          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-6 h-6" />
-        </div>
-        <div className="absolute top-32 left-1/5 opacity-70">
-          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-5 h-5" />
-        </div>
-
-        {/* Small brick blocks */}
-        <div className="absolute top-28 left-1/6 opacity-60">
-          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-8 h-2" />
-        </div>
-        <div className="absolute top-40 right-1/6 opacity-50">
-          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-10 h-2" />
-        </div>
-
-        {/* Grass decoration at bottom - smaller */}
-        <div className="absolute bottom-0 left-0 w-full opacity-40">
-          <img src="/src/pixel SVG/trawa.svg" alt="Grass" className="w-full h-4 object-cover" />
-        </div>
-      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main banner - left side */}
