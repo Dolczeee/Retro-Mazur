@@ -10,81 +10,73 @@ export default function HeroBanner() {
       backgroundRepeat: 'repeat-x'
     }}>
       <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main banner - left side */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          {/* Main banner - left side (larger like fishing store) */}
           <div className="lg:col-span-3">
-            <div className="relative overflow-hidden rounded-lg h-[500px]">
+            <div className="relative overflow-hidden rounded-lg h-[400px]">
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=500"
                 alt="Retro gaming collection"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent">
                 <div className="absolute bottom-8 left-8 text-white">
                   <div className="mb-4">
-                    <span className="bg-mario-red text-white px-3 py-1 rounded font-pixel text-sm">
-                      🏆 MEGA PROMOCJA
+                    <span className="bg-mario-red text-white px-4 py-2 rounded font-pixel text-sm">
+                      🏆 DRAPIEŻNY TYDZIEŃ RETRO
                     </span>
                   </div>
-                  <h1 className="font-pixel text-3xl lg:text-4xl mb-4 text-shadow-pixel">
+                  <h1 className="font-pixel text-4xl lg:text-5xl mb-4 text-shadow-pixel">
                     Retro Gaming<br />
                     <span className="text-coin-yellow">do -50%</span>
                   </h1>
-                  <p className="text-lg mb-6 opacity-90">
-                    Konsole Nintendo, Sega, PlayStation i wiele więcej!
+                  <p className="text-xl mb-6 opacity-90">
+                    Nintendo, Sega, PlayStation i klasyki!
                   </p>
-                  <Button className="mario-button text-white px-6 py-3 font-pixel hover:bg-mario-red">
-                    ZOBACZ OFERTĘ
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  <Button className="mario-button text-white px-8 py-4 font-pixel hover:bg-mario-red text-lg">
+                    ZOBACZ PROMOCJE
+                    <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right sidebar with blog links and offers */}
-          <div className="space-y-6">
-            {/* Featured article */}
-            <div className="relative overflow-hidden rounded-lg h-60">
+          {/* Right sidebar - similar to fishing store */}
+          <div className="lg:col-span-2 space-y-4">
+            {/* Quick promo banner */}
+            <div className="relative overflow-hidden rounded-lg h-[190px] bg-gradient-to-r from-mario-blue to-pipe-green">
+              <div className="absolute inset-0 p-6 text-white">
+                <h3 className="font-pixel text-xl mb-3 text-shadow-pixel">
+                  🕹️ Game Boy Fever
+                </h3>
+                <p className="text-sm mb-4 opacity-90">
+                  Portable retro w super cenach
+                </p>
+                <Button className="mario-button bg-coin-yellow text-pixel-black px-4 py-2 font-pixel hover:bg-coin-yellow text-sm">
+                  SPRAWDŹ →
+                </Button>
+              </div>
+            </div>
+
+            {/* Second promo */}
+            <div className="relative overflow-hidden rounded-lg h-[190px]">
               <img 
-                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=180"
-                alt="Game Boy collection"
+                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250"
+                alt="PlayStation collection"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-pixel text-sm mb-2">
-                    Historia Game Boy
+                  <h3 className="font-pixel text-lg mb-2 text-shadow-pixel">
+                    🎮 PlayStation Retro
                   </h3>
-                  <div className="flex items-center text-xs opacity-80">
-                    <Clock className="w-3 h-3 mr-1" />
-                    <span>2 dni temu</span>
-                  </div>
+                  <p className="text-sm opacity-90">
+                    Klasyki Sony w jednym miejscu
+                  </p>
                 </div>
               </div>
             </div>
-
-            {/* Second article */}
-            <div className="relative overflow-hidden rounded-lg h-60">
-              <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=180"
-                alt="PlayStation retro"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-pixel text-sm mb-2">
-                    PlayStation Retro
-                  </h3>
-                  <div className="flex items-center text-xs opacity-80">
-                    <Clock className="w-3 h-3 mr-1" />
-                    <span>5 dni temu</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
           </div>
         </div>
       </div>
