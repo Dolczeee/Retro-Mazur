@@ -234,6 +234,26 @@ export default function Header() {
     }
   ];
 
+  const handleMouseEnter = (menuType: string) => {
+    if (menuType === 'categories') {
+      setShowCategories(true);
+      setShowBrands(false);
+      setShowPromotions(false);
+    } else if (menuType === 'brands') {
+      setShowBrands(true);
+      setShowCategories(false);
+      setShowPromotions(false);
+    } else if (menuType === 'promotions') {
+      setShowPromotions(true);
+      setShowCategories(false);
+      setShowBrands(false);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Nie zamykamy od razu - pozwalamy na przejście na dropdown
+  };
+
   const closeAllMenus = () => {
     setShowCategories(false);
     setShowBrands(false);
@@ -319,44 +339,14 @@ export default function Header() {
             <div className="flex items-center">
               <div 
                 className="relative"
-                onMouseEnter={() => setShowCategories(true)}
-                onMouseLeave={() => setShowCategories(false)}
+                onMouseEnter={() => handleMouseEnter('categories')}
+                onMouseLeave={handleMouseLeave}
               >
                 <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
                   <Menu className="w-4 h-4 mr-2" /> 
                   KATEGORIE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Categories Dropdown */}
-                {showCategories && (
-                  <div className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1000px]">
-                    <div className="grid grid-cols-6 gap-6 p-6">
-                      {categories.map((category, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                            <span className="text-2xl">{category.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                              {category.title}
-                            </h3>
-                          </div>
-                          <ul className="space-y-1">
-                            {category.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
 
@@ -365,112 +355,155 @@ export default function Header() {
               {/* Brands Menu */}
               <div 
                 className="relative"
-                onMouseEnter={() => setShowBrands(true)}
-                onMouseLeave={() => setShowBrands(false)}
+                onMouseEnter={() => handleMouseEnter('brands')}
+                onMouseLeave={handleMouseLeave}
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   🏷️ MARKI
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showBrands ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Brands Dropdown */}
-                {showBrands && (
-                  <div className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1000px]">
-                    <div className="grid grid-cols-6 gap-6 p-6">
-                      {brands.map((brand, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                            <span className="text-2xl">{brand.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                              {brand.title}
-                            </h3>
-                          </div>
-                          <ul className="space-y-1">
-                            {brand.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Promotions Menu */}
               <div 
                 className="relative"
-                onMouseEnter={() => setShowPromotions(true)}
-                onMouseLeave={() => setShowPromotions(false)}
+                onMouseEnter={() => handleMouseEnter('promotions')}
+                onMouseLeave={handleMouseLeave}
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   ⭐ PROMOCJE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showPromotions ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Promotions Dropdown */}
-                {showPromotions && (
-                  <div className="absolute top-full right-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] min-w-[1200px]">
-                    <div className="grid grid-cols-4 gap-6 p-6">
-                      {promotions.map((promo, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
-                            <div className="flex items-center space-x-2">
-                              <span className="text-2xl">{promo.icon}</span>
-                              <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                                {promo.title}
-                              </h3>
-                            </div>
-                            <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
-                              {promo.badge}
-                            </span>
-                          </div>
-                          <ul className="space-y-1">
-                            {promo.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Special footer with extra offers */}
-                    <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
-                      <div className="grid grid-cols-3 gap-4 text-white text-center">
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          🎮 WEEKLY SPECIAL<br/>
-                          <span className="text-coin-yellow">-70% RETRO PACK</span>
-                        </div>
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          🏆 BOSS FIGHT<br/>
-                          <span className="text-coin-yellow">MEGA BUNDLE 99zł</span>
-                        </div>
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          ⭐ POWER-UP<br/>
-                          <span className="text-coin-yellow">DARMOWA DOSTAWA</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
         </div>
+
+        {/* Dropdown Menus - positioned absolutely to avoid layout shifts */}
+        {/* Categories Dropdown */}
+        {showCategories && (
+          <div 
+            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+            onMouseEnter={() => setShowCategories(true)}
+            onMouseLeave={() => setShowCategories(false)}
+          >
+            <div className="grid grid-cols-6 gap-6 p-6">
+              {categories.map((category, index) => (
+                <div key={index} className="space-y-3">
+                  <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                    <span className="text-2xl">{category.icon}</span>
+                    <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <ul className="space-y-1">
+                    {category.subcategories.map((sub, subIndex) => (
+                      <li key={subIndex}>
+                        <a 
+                          href="#" 
+                          className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                        >
+                          {sub}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Brands Dropdown */}
+        {showBrands && (
+          <div 
+            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+            onMouseEnter={() => setShowBrands(true)}
+            onMouseLeave={() => setShowBrands(false)}
+          >
+            <div className="grid grid-cols-6 gap-6 p-6">
+              {brands.map((brand, index) => (
+                <div key={index} className="space-y-3">
+                  <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                    <span className="text-2xl">{brand.icon}</span>
+                    <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                      {brand.title}
+                    </h3>
+                  </div>
+                  <ul className="space-y-1">
+                    {brand.subcategories.map((sub, subIndex) => (
+                      <li key={subIndex}>
+                        <a 
+                          href="#" 
+                          className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                        >
+                          {sub}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Promotions Dropdown */}
+        {showPromotions && (
+          <div 
+            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
+            onMouseEnter={() => setShowPromotions(true)}
+            onMouseLeave={() => setShowPromotions(false)}
+          >
+            <div className="grid grid-cols-4 gap-6 p-6">
+              {promotions.map((promo, index) => (
+                <div key={index} className="space-y-3">
+                  <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-2xl">{promo.icon}</span>
+                      <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                        {promo.title}
+                      </h3>
+                    </div>
+                    <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
+                      {promo.badge}
+                    </span>
+                  </div>
+                  <ul className="space-y-1">
+                    {promo.subcategories.map((sub, subIndex) => (
+                      <li key={subIndex}>
+                        <a 
+                          href="#" 
+                          className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                        >
+                          {sub}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            
+            {/* Special footer with extra offers */}
+            <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
+              <div className="grid grid-cols-3 gap-4 text-white text-center">
+                <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                  🎮 WEEKLY SPECIAL<br/>
+                  <span className="text-coin-yellow">-70% RETRO PACK</span>
+                </div>
+                <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                  🏆 BOSS FIGHT<br/>
+                  <span className="text-coin-yellow">MEGA BUNDLE 99zł</span>
+                </div>
+                <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                  ⭐ POWER-UP<br/>
+                  <span className="text-coin-yellow">DARMOWA DOSTAWA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Overlay to close dropdowns when clicking outside */}
