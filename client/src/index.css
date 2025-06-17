@@ -65,6 +65,8 @@
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Roboto', sans-serif;
     background-color: var(--retro-beige);
+    line-height: 1.6;
+    font-size: 16px;
   }
 }
 
@@ -278,5 +280,15 @@
 }
 
 .text-shadow-pixel {
-  text-shadow: 2px 2px 0px var(--pixel-black);
+  text-shadow: 3px 3px 0px var(--pixel-black), 1px 1px 0px var(--pixel-black);
+}
+
+.text-readable {
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+.pixel-text-large {
+  font-size: 1.25rem;
+  line-height: 1.5;
 }

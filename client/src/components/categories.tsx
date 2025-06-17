@@ -31,10 +31,10 @@ export default function Categories() {
               <div className="font-pixel text-xs text-mario-blue mb-1 group-hover:text-white transition-colors">
                 {category.subtitle}
               </div>
-              <h3 className="font-pixel text-lg mb-2 text-pixel-black group-hover:text-white transition-colors">
+              <h3 className="font-pixel text-xl mb-3 text-pixel-black group-hover:text-white transition-colors">
                 {category.name}
               </h3>
-              <p className="text-gray-600 group-hover:text-gray-200 transition-colors font-medium">
+              <p className="text-gray-700 group-hover:text-gray-100 transition-colors font-medium text-base leading-relaxed">
                 {category.description}
               </p>
 

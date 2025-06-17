@@ -52,10 +52,10 @@ export default function MarioWorldSection() {
           <div className="font-pixel text-white text-sm mb-2 bg-mario-red px-4 py-2 inline-block border-3 border-white">
             🌍 WYBIERZ SWÓJ ŚWIAT
           </div>
-          <h2 className="font-pixel text-white text-3xl lg:text-5xl mb-4 text-shadow-pixel">
+          <h2 className="font-pixel text-white text-4xl lg:text-6xl mb-6 text-shadow-pixel">
             MARIO RETRO WORLDS
           </h2>
-          <p className="text-white text-lg max-w-2xl mx-auto">
+          <p className="text-white text-xl max-w-3xl mx-auto leading-relaxed">
             Każdy świat skrywa inne skarby retro gamingu. Gdzie rozpoczniesz swoją przygodę?
           </p>
         </div>
@@ -75,12 +75,12 @@ export default function MarioWorldSection() {
               <div className="text-5xl mb-4 text-center power-up">{world.icon}</div>
               
               {/* Title */}
-              <h3 className="font-pixel text-lg mb-3 text-center">
+              <h3 className="font-pixel text-xl mb-4 text-center">
                 {world.name}
               </h3>
               
               {/* Description */}
-              <p className="text-sm mb-4 text-center opacity-90">
+              <p className="text-base mb-5 text-center opacity-95 leading-relaxed">
                 {world.description}
               </p>
               

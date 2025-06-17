@@ -20,11 +20,11 @@ export default function HeroBanner() {
                 🏆 WORLD 1-1
               </span>
             </div>
-            <h1 className="font-pixel text-white text-4xl lg:text-6xl mb-6 leading-tight text-shadow-pixel">
+            <h1 className="font-pixel text-white text-5xl lg:text-7xl mb-8 leading-tight text-shadow-pixel">
               IT'S-A ME,<br />
               <span className="text-coin-yellow animate-bounce inline-block">RETRO!</span>
             </h1>
-            <p className="text-white text-lg mb-8 font-medium bg-pixel-black/20 p-4 border-l-4 border-coin-yellow">
+            <p className="text-white text-xl mb-10 font-medium bg-pixel-black/30 p-6 border-l-4 border-coin-yellow leading-relaxed">
               🎮 Wejdź do magicznego świata retro gier! <br />
               🏰 Przygoda zaczyna się tutaj - konsole Nintendo, Sega i PlayStation. <br />
               💰 Zbieraj punkty i monety za każdy zakup!
