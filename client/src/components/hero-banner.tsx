@@ -3,17 +3,17 @@ import { ArrowRight, Star, Clock } from "lucide-react";
 
 export default function HeroBanner() {
   return (
-    <section className="relative py-16 px-4 overflow-hidden" style={{
+    <section className="relative py-20 px-6 overflow-hidden" style={{
       backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
       backgroundSize: '970px auto',
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat-x'
     }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main banner - left side */}
-          <div className="lg:col-span-2">
-            <div className="relative overflow-hidden rounded-lg h-96">
+          <div className="lg:col-span-3">
+            <div className="relative overflow-hidden rounded-lg h-[500px]">
               <img 
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
                 alt="Retro gaming collection"
@@ -43,9 +43,9 @@ export default function HeroBanner() {
           </div>
 
           {/* Right sidebar with blog links and offers */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             {/* Featured article */}
-            <div className="relative overflow-hidden rounded-lg h-44">
+            <div className="relative overflow-hidden rounded-lg h-60">
               <img 
                 src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=180"
                 alt="Game Boy collection"
@@ -65,7 +65,7 @@ export default function HeroBanner() {
             </div>
 
             {/* Second article */}
-            <div className="relative overflow-hidden rounded-lg h-44">
+            <div className="relative overflow-hidden rounded-lg h-60">
               <img 
                 src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=180"
                 alt="PlayStation retro"

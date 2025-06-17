@@ -385,8 +385,8 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
-                <div className="grid grid-cols-6 gap-6 p-6">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1400px] dropdown-container active">
+                <div className="grid grid-cols-6 gap-8 p-8">
                   {categories.map((category, index) => (
                     <div key={index} className="space-y-3">
                       <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
@@ -421,8 +421,8 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
-                <div className="grid grid-cols-6 gap-6 p-6">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1400px] dropdown-container active">
+                <div className="grid grid-cols-6 gap-8 p-8">
                   {brands.map((brand, index) => (
                     <div key={index} className="space-y-3">
                       <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
@@ -457,8 +457,8 @@ export default function Header() {
               onMouseEnter={cancelClose}
               onMouseLeave={closeMenu}
             >
-              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] dropdown-container active">
-                <div className="grid grid-cols-4 gap-6 p-6">
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1400px] dropdown-container active">
+                <div className="grid grid-cols-4 gap-8 p-8">
                   {promotions.map((promo, index) => (
                     <div key={index} className="space-y-3">
                       <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
