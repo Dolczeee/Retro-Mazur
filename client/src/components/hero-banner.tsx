@@ -10,49 +10,37 @@ export default function HeroBanner() {
       backgroundRepeat: 'no-repeat'
     }}>
       {/* Animated background elements */}
-      <div className="absolute inset-0">
-        {/* Clouds */}
-        <div className="absolute top-10 left-10 float-slow">
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-16 h-12" />
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Small clouds */}
+        <div className="absolute top-6 left-8 opacity-70">
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-8 h-6" />
         </div>
-        <div className="absolute top-20 right-20 float-slow" style={{animationDelay: '1s'}}>
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-20 h-15" />
+        <div className="absolute top-12 right-16 opacity-60">
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-10 h-7" />
         </div>
-        <div className="absolute top-32 left-1/3 float-slow" style={{animationDelay: '2s'}}>
-          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-18 h-14" />
-        </div>
-
-        {/* Floating coins */}
-        <div className="absolute top-24 left-1/4 coin-animation">
-          <div className="w-8 h-8 bg-coin-yellow rounded-full border-2 border-pixel-black flex items-center justify-center text-xs font-pixel">
-            ★
-          </div>
-        </div>
-        <div className="absolute top-36 right-1/4 coin-animation" style={{animationDelay: '1s'}}>
-          <div className="w-8 h-8 bg-coin-yellow rounded-full border-2 border-pixel-black flex items-center justify-center text-xs font-pixel">
-            ★
-          </div>
+        <div className="absolute top-20 left-1/3 opacity-50">
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-6 h-4" />
         </div>
 
-        {/* Question mark blocks */}
-        <div className="absolute top-20 right-1/3 power-up">
-          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-12 h-12" />
+        {/* Small question mark blocks */}
+        <div className="absolute top-16 right-1/4 opacity-80">
+          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-6 h-6" />
         </div>
-        <div className="absolute bottom-28 left-20 power-up" style={{animationDelay: '0.5s'}}>
-          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-12 h-12" />
-        </div>
-
-        {/* Brick platforms */}
-        <div className="absolute top-44 left-1/4 warp-pipe">
-          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-16 h-4" />
-        </div>
-        <div className="absolute bottom-36 right-1/4 warp-pipe" style={{animationDelay: '1.5s'}}>
-          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-20 h-4" />
+        <div className="absolute top-32 left-1/5 opacity-70">
+          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-5 h-5" />
         </div>
 
-        {/* Grass decoration at bottom */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <img src="/src/pixel SVG/trawa.svg" alt="Grass" className="w-full h-8 object-cover" />
+        {/* Small brick blocks */}
+        <div className="absolute top-28 left-1/6 opacity-60">
+          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-8 h-2" />
+        </div>
+        <div className="absolute top-40 right-1/6 opacity-50">
+          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-10 h-2" />
+        </div>
+
+        {/* Grass decoration at bottom - smaller */}
+        <div className="absolute bottom-0 left-0 w-full opacity-40">
+          <img src="/src/pixel SVG/trawa.svg" alt="Grass" className="w-full h-4 object-cover" />
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
