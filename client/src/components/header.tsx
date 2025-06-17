@@ -25,9 +25,11 @@ export default function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="bg-mario-red text-white px-4 py-2 font-pixel text-lg pixel-border mr-4">
-              RETRO<br />MAZUR
-            </div>
+            <img 
+              src="/retro-mazur-logo.png" 
+              alt="Retro Mazur Logo" 
+              className="h-16 mr-4"
+            />
           </div>
           
           {/* Search Bar */}

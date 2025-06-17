@@ -5,9 +5,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="bg-mario-red text-white px-4 py-2 font-pixel text-lg pixel-border mb-4 inline-block">
-              RETRO<br />MAZUR
-            </div>
+            <img 
+              src="/retro-mazur-logo.png" 
+              alt="Retro Mazur Logo" 
+              className="h-16 mb-4"
+            />
             <p className="text-gray-300 mb-4">
               Twój sklep z retro grami i konsolami. 
               Odkryj nostalgię gier z lat 80. i 90.
