@@ -9,7 +9,7 @@ export default function HeroBanner() {
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat-x'
     }}>
-      <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main banner - left side */}
           <div className="lg:col-span-3">
