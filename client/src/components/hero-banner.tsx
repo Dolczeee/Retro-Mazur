@@ -80,20 +80,7 @@ export default function HeroBanner() {
               </div>
             </div>
             
-            {/* Special offer box */}
-            <div className="pixel-card bg-gradient-to-br from-coin-yellow to-yellow-400 p-4 text-center rounded-lg">
-              <div className="text-2xl mb-2">🎁</div>
-              <h3 className="font-pixel text-sm mb-2 text-pixel-black">
-                DARMOWA DOSTAWA
-              </h3>
-              <p className="text-xs text-gray-700 mb-2">
-                Od 199 zł
-              </p>
-              <div className="flex items-center justify-center">
-                <Star className="w-3 h-3 text-orange-500 mr-1" />
-                <span className="text-xs font-pixel text-orange-600">SPRAWDŹ</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
