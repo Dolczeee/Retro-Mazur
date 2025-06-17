@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 export default function Categories() {
@@ -46,12 +45,6 @@ export default function Categories() {
           <h2 className="font-pixel text-3xl text-white mb-4">
             🌍 WYBIERZ SWÓJ ŚWIAT
           </h2>
-          <h3 className="font-pixel text-xl text-coin-yellow mb-4">
-            MARIO RETRO WORLDS
-          </h3>
-          <p className="text-white text-lg font-medium max-w-2xl mx-auto">
-            Każdy świat skrywa inne skarby retro gamingu. Gdzie rozpoczniesz swoją przygodę?
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -64,32 +57,32 @@ export default function Categories() {
               <div className="font-pixel text-xs text-coin-yellow mb-2 bg-pixel-black px-2 py-1 inline-block">
                 WORLD {world.world}
               </div>
-              
+
               {/* Icon */}
               <div className="text-5xl mb-4 text-center power-up">{world.icon}</div>
-              
+
               {/* Title */}
               <h3 className="font-pixel text-lg mb-3 text-center">
                 {world.name}
               </h3>
-              
+
               {/* Description */}
               <p className="text-sm mb-4 text-center opacity-90">
                 {world.description}
               </p>
-              
+
               {/* Items count */}
               <div className="text-center font-pixel text-xs text-coin-yellow">
                 {world.items}
               </div>
-              
+
               {/* Enter button */}
               <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Button className="bg-coin-yellow text-pixel-black font-pixel text-xs px-4 py-2 mario-button">
                   ENTER →
                 </Button>
               </div>
-              
+
               {/* Mario-style decoration */}
               <div className="absolute top-2 right-2 w-2 h-2 bg-coin-yellow"></div>
               <div className="absolute bottom-2 left-2 w-2 h-2 bg-coin-yellow"></div>
