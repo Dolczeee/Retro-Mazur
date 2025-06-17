@@ -4,7 +4,26 @@ import { ArrowRight, Star, Clock } from "lucide-react";
 export default function HeroBanner() {
   return (
     <section className="relative pt-8 pb-0 px-6 overflow-hidden">
-      <div className="mx-auto px-6 sm:px-8 lg:px-12 flex justify-center">
+      {/* Background clouds decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src="/src/pixel SVG/chmurka.svg" 
+          alt="" 
+          className="absolute top-12 left-12 w-24 h-16"
+        />
+        <img 
+          src="/src/pixel SVG/chmurka.svg" 
+          alt="" 
+          className="absolute top-32 right-20 w-28 h-18"
+        />
+        <img 
+          src="/src/pixel SVG/chmurka.svg" 
+          alt="" 
+          className="absolute bottom-20 left-1/4 w-32 h-20"
+        />
+      </div>
+      
+      <div className="mx-auto px-6 sm:px-8 lg:px-12 flex justify-center relative z-10">
         <div className="flex gap-6">
           {/* Main banner - left side */}
           <div className="flex-shrink-0">

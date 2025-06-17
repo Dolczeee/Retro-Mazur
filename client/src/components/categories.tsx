@@ -39,36 +39,26 @@ export default function Categories() {
   return (
     <section className="py-16 relative overflow-hidden bg-gradient-to-b from-mario-blue to-mario-blue/80">
       {/* Background clouds decoration */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-15">
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-10 left-10 w-32 h-20 transform rotate-12"
+          className="absolute top-16 left-16 w-28 h-18"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute top-20 right-20 w-24 h-16 transform -rotate-6"
+          className="absolute top-24 right-24 w-32 h-20"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute bottom-32 left-1/4 w-40 h-24 transform rotate-3"
+          className="absolute bottom-24 left-1/3 w-36 h-22"
         />
         <img 
           src="/src/pixel SVG/chmurka.svg" 
           alt="" 
-          className="absolute bottom-20 right-10 w-28 h-18"
-        />
-        <img 
-          src="/src/pixel SVG/chmurka.svg" 
-          alt="" 
-          className="absolute top-1/2 left-0 w-36 h-22 transform -rotate-12"
-        />
-        <img 
-          src="/src/pixel SVG/chmurka.svg" 
-          alt="" 
-          className="absolute top-1/3 right-0 w-32 h-20 transform rotate-8"
+          className="absolute bottom-32 right-16 w-30 h-19"
         />
       </div>
 
