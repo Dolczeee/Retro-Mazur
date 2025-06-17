@@ -32,16 +32,7 @@ export default function HeroBanner() {
                     </p>
                   </div>
                   
-                  <div className="mb-6">
-                    <span className="bg-pipe-green text-white px-4 py-2 rounded font-pixel text-sm">
-                      Rabaty do -70% na wybrane zestawy!
-                    </span>
-                  </div>
                   
-                  <Button className="mario-button text-white px-8 py-4 font-pixel hover:bg-mario-red text-lg">
-                    ZOBACZ KOLEKCJĘ
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
                 </div>
               </div>
             </div>
