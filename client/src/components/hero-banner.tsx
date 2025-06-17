@@ -1,77 +1,109 @@
+
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Star, Clock } from "lucide-react";
 
 export default function HeroBanner() {
   return (
-    <section className="gradient-mario py-16 relative overflow-hidden">
-      {/* Mario-themed background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 text-6xl animate-bounce">🍄</div>
-        <div className="absolute top-20 right-20 text-4xl animate-pulse">⭐</div>
-        <div className="absolute bottom-20 left-1/4 text-5xl animate-bounce">🪙</div>
-        <div className="absolute top-1/3 right-1/3 text-3xl animate-pulse">🌸</div>
-        <div className="absolute bottom-10 right-10 text-6xl animate-bounce">🏰</div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="mb-6">
-              <span className="font-pixel text-coin-yellow text-xl bg-mario-red px-4 py-2 border-3 border-pixel-black mb-4 inline-block animate-pulse">
-                🏆 WORLD 1-1
-              </span>
-            </div>
-            <h1 className="font-pixel text-white text-4xl lg:text-6xl mb-6 leading-tight text-shadow-pixel">
-              IT'S-A ME,<br />
-              <span className="text-coin-yellow animate-bounce inline-block">RETRO!</span>
-            </h1>
-            <p className="text-white text-lg mb-8 font-medium bg-pixel-black/20 p-4 border-l-4 border-coin-yellow">
-              🎮 Wejdź do magicznego świata retro gier! <br />
-              🏰 Przygoda zaczyna się tutaj - konsole Nintendo, Sega i PlayStation. <br />
-              💰 Zbieraj punkty i monety za każdy zakup!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="mario-button text-white px-8 py-4 font-pixel text-lg hover:bg-mario-red transform hover:scale-105 transition-transform">
-                🎮 START GAME!
-              </Button>
-              <Button className="bg-coin-yellow text-pixel-black px-8 py-4 font-pixel text-lg mario-button hover:bg-coin-yellow transform hover:scale-105 transition-transform">
-                ⭐ POWER-UP -50%
-              </Button>
-              <Button className="bg-pipe-green text-white px-8 py-4 font-pixel text-lg mario-button hover:bg-pipe-green transform hover:scale-105 transition-transform">
-                🍄 BONUS STAGE
-              </Button>
-            </div>
-            
-            {/* Mario-style status bar */}
-            <div className="mt-8 bg-pixel-black text-white p-4 font-pixel text-sm border-3 border-white">
-              <div className="grid grid-cols-3 gap-4">
-                <div>MARIO<br /><span className="text-coin-yellow">🪙 000000</span></div>
-                <div className="text-center">WORLD<br /><span className="text-pipe-green">🌍 1-1</span></div>
-                <div className="text-right">TIME<br /><span className="text-mario-red">⏰ ∞</span></div>
+    <section className="bg-retro-beige py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Main banner - left side */}
+          <div className="lg:col-span-2">
+            <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-mario-red to-mario-blue p-8 text-white">
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-4 right-4 text-4xl animate-bounce">🎮</div>
+                <div className="absolute bottom-4 left-4 text-3xl animate-pulse">⭐</div>
+                <div className="absolute top-1/2 right-1/4 text-2xl animate-bounce">🪙</div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="mb-4">
+                  <span className="bg-coin-yellow text-pixel-black px-3 py-1 rounded font-pixel text-sm">
+                    🏆 MEGA PROMOCJA
+                  </span>
+                </div>
+                
+                <h1 className="font-pixel text-3xl lg:text-4xl mb-4 text-shadow-pixel">
+                  Retro Gaming<br />
+                  <span className="text-coin-yellow">do -50%</span>
+                </h1>
+                
+                <p className="text-lg mb-6 opacity-90">
+                  Konsole Nintendo, Sega, PlayStation i wiele więcej!
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button className="mario-button text-white px-6 py-3 font-pixel hover:bg-mario-red">
+                    ZOBACZ OFERTĘ
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                  <Button className="bg-coin-yellow text-pixel-black px-6 py-3 font-pixel hover:bg-coin-yellow">
+                    🎯 NOWOŚCI
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
-                alt="Retro gaming console collection" 
-                className="pixel-card rounded-lg float-slow"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
-                alt="Vintage game cartridges" 
-                className="pixel-card rounded-lg slide-in"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
-                alt="Classic arcade machine" 
-                className="pixel-card rounded-lg pulse-slow"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" 
-                alt="Retro handheld games" 
-                className="pixel-card rounded-lg float-slow"
-              />
+          
+          {/* Right sidebar with blog links */}
+          <div className="space-y-4">
+            {/* Blog post 1 */}
+            <div className="pixel-card bg-white p-4 cursor-pointer hover:shadow-lg transition-shadow">
+              <div className="flex items-start space-x-3">
+                <div className="w-16 h-16 bg-mario-blue rounded flex items-center justify-center text-white text-2xl">
+                  📰
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-pixel text-sm mb-2 leading-relaxed">
+                    Historia konsol Nintendo
+                  </h3>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <Clock className="w-3 h-3 mr-1" />
+                    <span>2 dni temu</span>
+                  </div>
+                  <div className="flex items-center mt-2">
+                    <span className="text-mario-red text-xs font-pixel">CZYTAJ WIĘCEJ</span>
+                    <ArrowRight className="w-3 h-3 ml-1 text-mario-red" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Blog post 2 */}
+            <div className="pixel-card bg-white p-4 cursor-pointer hover:shadow-lg transition-shadow">
+              <div className="flex items-start space-x-3">
+                <div className="w-16 h-16 bg-pipe-green rounded flex items-center justify-center text-white text-2xl">
+                  🎯
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-pixel text-sm mb-2 leading-relaxed">
+                    Top 10 gier retro
+                  </h3>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <Clock className="w-3 h-3 mr-1" />
+                    <span>5 dni temu</span>
+                  </div>
+                  <div className="flex items-center mt-2">
+                    <span className="text-mario-red text-xs font-pixel">CZYTAJ WIĘCEJ</span>
+                    <ArrowRight className="w-3 h-3 ml-1 text-mario-red" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Special offer box */}
+            <div className="pixel-card bg-gradient-to-br from-coin-yellow to-yellow-400 p-4 text-center">
+              <div className="text-2xl mb-2">🎁</div>
+              <h3 className="font-pixel text-sm mb-2 text-pixel-black">
+                DARMOWA DOSTAWA
+              </h3>
+              <p className="text-xs text-gray-700 mb-2">
+                Od 199 zł
+              </p>
+              <div className="flex items-center justify-center">
+                <Star className="w-3 h-3 text-orange-500 mr-1" />
+                <span className="text-xs font-pixel text-orange-600">SPRAWDŹ</span>
+              </div>
             </div>
           </div>
         </div>
