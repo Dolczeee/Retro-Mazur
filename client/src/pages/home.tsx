@@ -15,27 +15,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-retro-beige">
       <Header />
-      <main className="w-full">
-        <HeroBanner />
-        <Categories />
-        <FeaturedProducts />
-        <PromotionalBanners />
-        <NewProducts />
-        <PopularProducts />
-        <MarioWorldSection />
-        <BrandsSection />
-        <BlogSection />
-        <AboutSection />
-      </main>
-      <Footer />
-    </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-retro-beige">
-      <Header />
       <main>
         <div className="bg-mario-blue" style={{
           backgroundImage: `
