@@ -72,12 +72,6 @@ export default function Header() {
               <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
                 <Menu className="w-4 h-4 mr-2" /> KATEGORIE
               </Button>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">KONSOLE</a>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">GRY</a>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">AKCESORIA</a>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">CZĘŚCI</a>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">MARKI</a>
-              <a href="#" className="hover:text-coin-yellow transition-colors font-medium">KOLEKCJE</a>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-coin-yellow font-pixel text-sm">🏷️ MARKI</span>
