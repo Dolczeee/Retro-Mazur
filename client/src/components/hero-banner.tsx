@@ -18,18 +18,20 @@ export default function HeroBanner() {
                 <div className="absolute bottom-8 left-8 text-white">
                   <div className="mb-4">
                     <span className="bg-mario-red text-white px-4 py-2 rounded font-pixel text-sm">
-                      ⚡ MEGA WYPRZEDAŻ VINTAGE
+                      🎮 RETRO GAMING
                     </span>
                   </div>
-                  <h1 className="font-pixel text-4xl lg:text-5xl mb-4 text-shadow-pixel">
-                    Arcade Legends<br />
-                    <span className="text-coin-yellow">do -70%</span>
+                  <h1 className="font-pixel text-3xl lg:text-4xl mb-4 text-shadow-pixel">
+                    <span className="text-coin-yellow">Odkryj Klasyki</span>
                   </h1>
-                  <p className="text-xl mb-6 opacity-90">
-                    Atari, Commodore, Amiga i więcej!
+                  <p className="text-xl mb-4 opacity-90">
+                    Największa kolekcja vintage gaming w Polsce! Oryginalne konsole Atari 2600, Commodore 64, Amiga 500, Nintendo NES, Sega Genesis i setki klasycznych gier. Wszystkie produkty sprawdzone i gotowe do gry. Idealne dla kolekcjonerów i miłośników retro gamingu.
+                  </p>
+                  <p className="text-lg mb-6 text-coin-yellow font-pixel">
+                    Rabaty do -70% na wybrane zestawy!
                   </p>
                   <Button className="mario-button text-white px-8 py-4 font-pixel hover:bg-mario-red text-lg">
-                    KOLEKCJA VINTAGE
+                    ZOBACZ KOLEKCJĘ
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
