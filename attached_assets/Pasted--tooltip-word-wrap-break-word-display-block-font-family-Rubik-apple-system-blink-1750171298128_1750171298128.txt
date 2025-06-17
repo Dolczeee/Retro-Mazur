@@ -1,0 +1,116 @@
+.tooltip {
+    word-wrap: break-word;
+    display: block;
+    font-family: Rubik,-apple-system,blinkmacsystemfont,Segoe UI,roboto,Helvetica Neue,arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.5;
+    margin: 10px;
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    z-index: 1070
+}
+
+@media(max-width: 992px) {
+    .tooltip {
+        font-size:calc(.775rem + .16129vw)
+    }
+}
+
+.tooltip.show {
+    opacity: 1
+}
+
+.tooltip .arrow {
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0
+}
+
+.tooltip .arrow:before {
+    border-color: transparent;
+    border-style: solid;
+    content: "";
+    position: absolute
+}
+
+.bs-tooltip-auto[x-placement^=top],.bs-tooltip-top {
+    padding: 0
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow,.bs-tooltip-top .arrow {
+    bottom: 0
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow:before,.bs-tooltip-top .arrow:before {
+    border-top-color: transparent;
+    border-width: 0;
+    top: 0
+}
+
+.bs-tooltip-auto[x-placement^=right],.bs-tooltip-right {
+    padding: 0
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow,.bs-tooltip-right .arrow {
+    height: 0;
+    left: 0;
+    width: 0
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow:before,.bs-tooltip-right .arrow:before {
+    border-right-color: transparent;
+    border-width: 0;
+    right: 0
+}
+
+.bs-tooltip-auto[x-placement^=bottom],.bs-tooltip-bottom {
+    padding: 0
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow,.bs-tooltip-bottom .arrow {
+    top: 0
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow:before,.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: transparent;
+    border-width: 0;
+    bottom: 0
+}
+
+.bs-tooltip-auto[x-placement^=left],.bs-tooltip-left {
+    padding: 0
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow,.bs-tooltip-left .arrow {
+    height: 0;
+    right: 0;
+    width: 0
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow:before,.bs-tooltip-left .arrow:before {
+    border-left-color: transparent;
+    border-width: 0;
+    left: 0
+}
+
+.tooltip-inner {
+    background-color: transparent;
+    border-radius: 0;
+    color: #000;
+    max-width: 200px;
+    padding: 10px;
+    text-align: center
+}
