@@ -18,7 +18,7 @@ export default function Home() {
       <main>
         <div className="bg-mario-blue" style={{
           backgroundImage: `
-            url('/pixel SVG/tło niebieskie.svg'),
+            url('/src/pixel SVG/tło niebieskie.svg'),
             linear-gradient(to bottom, 
               #42c1f2 0%, 
               #42c1f2 33%, 
