@@ -44,8 +44,8 @@ export default function Categories() {
         <div className="text-center mb-12">
           <div className="relative inline-block mb-6">
             {/* Background block like in Mario */}
-            <div className="bg-mario-red border-4 border-pixel-black px-8 py-4 transform rotate-1 absolute -inset-2"></div>
-            <div className="bg-pipe-green border-4 border-pixel-black px-8 py-4 relative">
+            <div className="bg-coin-yellow border-4 border-pixel-black px-8 py-4 transform rotate-1 absolute -inset-2"></div>
+            <div className="bg-mario-red border-4 border-pixel-black px-8 py-4 relative">
               <h2 className="font-pixel text-2xl lg:text-3xl text-white text-shadow-pixel tracking-wider">
                 🌍 WYBIERZ SWÓJ ŚWIAT
               </h2>
