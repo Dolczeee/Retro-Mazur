@@ -9,7 +9,7 @@ export default function Categories() {
   ];
 
   return (
-    <section className="py-16" style={{
+    <section className="pt-8 pb-16" style={{
       backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
       backgroundSize: '970px auto',
       backgroundPosition: 'center',
