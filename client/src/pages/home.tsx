@@ -28,8 +28,8 @@ export default function Home() {
               #84d0f0 100%
             )
           `,
-          backgroundSize: '700px auto, 100% 100%',
-          backgroundPosition: 'top left, center',
+          backgroundSize: '900px auto, 100% 100%',
+          backgroundPosition: 'top center, center',
           backgroundRepeat: 'repeat-x, no-repeat',
           imageRendering: 'pixelated'
         }}>
