@@ -1,8 +1,92 @@
-import { Search, User, Heart, ShoppingCart, Menu } from "lucide-react";
+import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 export default function Header() {
+  const [showCategories, setShowCategories] = useState(false);
+
+  const categories = [
+    {
+      icon: "🎮",
+      title: "KONSOLE",
+      subcategories: [
+        "Nintendo (NES, SNES, N64, GameCube)",
+        "Sony (PlayStation 1-5, PSP, PS Vita)",
+        "Microsoft (Xbox, Xbox 360, Xbox One)",
+        "Sega (Master System, Genesis, Dreamcast)",
+        "Atari (2600, 7800, Lynx)",
+        "Konsole przenośne",
+        "Mini konsole retro"
+      ]
+    },
+    {
+      icon: "💿",
+      title: "GRY",
+      subcategories: [
+        "Kasety Nintendo",
+        "Płyty PlayStation",
+        "Kasety Sega",
+        "Gry Atari",
+        "Gry Xbox",
+        "Gry PC retro",
+        "Gry przenośne"
+      ]
+    },
+    {
+      icon: "🕹️",
+      title: "KONTROLERY",
+      subcategories: [
+        "Pady Nintendo",
+        "Kontrolery PlayStation",
+        "Pady Xbox",
+        "Joysticki Atari",
+        "Arcade Sticki",
+        "Adaptery kontrolerów",
+        "Bezprzewodowe pady"
+      ]
+    },
+    {
+      icon: "🔧",
+      title: "AKCESORIA",
+      subcategories: [
+        "Kable AV/HDMI",
+        "Zasilacze",
+        "Karty pamięci",
+        "Adaptery",
+        "Pokrowce i etui",
+        "Cleaning kit",
+        "Modyfikacje"
+      ]
+    },
+    {
+      icon: "⚙️",
+      title: "CZĘŚCI ZAMIENNE",
+      subcategories: [
+        "Lasery do konsol",
+        "Mechanizmy napędów",
+        "Kondensatory",
+        "Gumki kontrolerów",
+        "Ekrany LCD",
+        "Obudowy",
+        "Przyciski i switche"
+      ]
+    },
+    {
+      icon: "🏪",
+      title: "SKLEP VINTAGE",
+      subcategories: [
+        "Automaty arcade",
+        "Komputery retro",
+        "Handheld konsole",
+        "Kalkulatory gier",
+        "Zegarki z grami",
+        "Gadżety retro",
+        "Kolekcjonerskie"
+      ]
+    }
+  ];
+
   return (
     <header className="bg-white shadow-lg border-b-4 border-pixel-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,13 +149,53 @@ export default function Header() {
       </div>
       
       {/* Navigation Menu */}
-      <nav className="bg-pixel-black text-white">
+      <nav className="bg-pixel-black text-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-3">
-            <div className="flex items-center space-x-8">
-              <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
+            <div className="flex items-center space-x-8 relative">
+              <Button 
+                className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green"
+                onClick={() => setShowCategories(!showCategories)}
+              >
                 <Menu className="w-4 h-4 mr-2" /> KATEGORIE
+                <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
               </Button>
+
+              {/* Categories Dropdown */}
+              {showCategories && (
+                <div className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50 min-w-[800px]">
+                  <div className="grid grid-cols-3 gap-6 p-6">
+                    {categories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                          <span className="text-2xl">{category.icon}</span>
+                          <h3 className="font-pixel text-sm text-mario-red">{category.title}</h3>
+                        </div>
+                        <ul className="space-y-1">
+                          {category.subcategories.map((sub, subIndex) => (
+                            <li key={subIndex}>
+                              <a 
+                                href="#" 
+                                className="text-gray-700 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors"
+                              >
+                                {sub}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 rounded-b-lg">
+                    <div className="flex justify-between items-center">
+                      <span className="font-pixel text-sm text-gray-600">🎯 WSZYSTKIE KATEGORIE</span>
+                      <Button className="mario-button text-white px-4 py-2 font-pixel text-xs">
+                        POKAŻ WSZYSTKO
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-coin-yellow font-pixel text-sm">🏷️ MARKI</span>
@@ -79,6 +203,14 @@ export default function Header() {
             </div>
           </div>
         </div>
+
+        {/* Overlay to close dropdown */}
+        {showCategories && (
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setShowCategories(false)}
+          />
+        )}
       </nav>
     </header>
   );
