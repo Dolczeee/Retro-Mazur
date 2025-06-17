@@ -250,8 +250,24 @@ export default function Header() {
     }
   };
 
-  const handleMouseLeave = () => {
-    // Nie zamykamy od razu - pozwalamy na przejście na dropdown
+  const handleTriggerMouseLeave = () => {
+    // Opóźnienie zamknięcia, aby umożliwić przejście na dropdown
+    setTimeout(() => {
+      setShowCategories(false);
+      setShowBrands(false);
+      setShowPromotions(false);
+    }, 150);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    // Anuluj zamknięcie gdy kursor wchodzi na dropdown
+  };
+
+  const handleDropdownMouseLeave = () => {
+    // Zamknij natychmiast gdy kursor opuszcza dropdown
+    setShowCategories(false);
+    setShowBrands(false);
+    setShowPromotions(false);
   };
 
   const closeAllMenus = () => {
@@ -340,7 +356,7 @@ export default function Header() {
               <div 
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('categories')}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={handleTriggerMouseLeave}
               >
                 <Button className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green">
                   <Menu className="w-4 h-4 mr-2" /> 
@@ -356,7 +372,7 @@ export default function Header() {
               <div 
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('brands')}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={handleTriggerMouseLeave}
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   🏷️ MARKI
@@ -368,7 +384,7 @@ export default function Header() {
               <div 
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('promotions')}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={handleTriggerMouseLeave}
               >
                 <Button className="bg-transparent px-4 py-2 font-pixel text-sm text-coin-yellow hover:text-white flex items-center transition-colors">
                   ⭐ PROMOCJE
@@ -384,8 +400,8 @@ export default function Header() {
         {showCategories && (
           <div 
             className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-            onMouseEnter={() => setShowCategories(true)}
-            onMouseLeave={() => setShowCategories(false)}
+            onMouseEnter={handleDropdownMouseEnter}
+            onMouseLeave={handleDropdownMouseLeave}
           >
             <div className="grid grid-cols-6 gap-6 p-6">
               {categories.map((category, index) => (
@@ -418,8 +434,8 @@ export default function Header() {
         {showBrands && (
           <div 
             className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-            onMouseEnter={() => setShowBrands(true)}
-            onMouseLeave={() => setShowBrands(false)}
+            onMouseEnter={handleDropdownMouseEnter}
+            onMouseLeave={handleDropdownMouseLeave}
           >
             <div className="grid grid-cols-6 gap-6 p-6">
               {brands.map((brand, index) => (
@@ -452,8 +468,8 @@ export default function Header() {
         {showPromotions && (
           <div 
             className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[100] w-[1200px]"
-            onMouseEnter={() => setShowPromotions(true)}
-            onMouseLeave={() => setShowPromotions(false)}
+            onMouseEnter={handleDropdownMouseEnter}
+            onMouseLeave={handleDropdownMouseLeave}
           >
             <div className="grid grid-cols-4 gap-6 p-6">
               {promotions.map((promo, index) => (
