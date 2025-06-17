@@ -280,3 +280,19 @@
 .text-shadow-pixel {
   text-shadow: 2px 2px 0px var(--pixel-black);
 }
+
+/* Menu item separators */
+.menu-item-with-separator::before {
+  background-color: #707070;
+  content: "";
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+}
+
+.menu-item-with-separator {
+  position: relative;
+}

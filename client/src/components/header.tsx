@@ -345,48 +345,14 @@ export default function Header() {
                   KATEGORIE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'categories' ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Categories Dropdown */}
-                {activeMenu === 'categories' && (
-                  <div 
-                    className="absolute top-full left-0 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={closeMenu}
-                  >
-                    <div className="grid grid-cols-6 gap-6 p-6">
-                      {categories.map((category, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                            <span className="text-2xl">{category.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                              {category.title}
-                            </h3>
-                          </div>
-                          <ul className="space-y-1">
-                            {category.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
 
             {/* Right side - Brands and Promotions */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center">
               {/* Brands Menu */}
               <div 
-                className="relative"
+                className="relative menu-item-with-separator"
                 onMouseEnter={() => openMenu('brands')}
                 onMouseLeave={closeMenu}
               >
@@ -394,45 +360,11 @@ export default function Header() {
                   🏷️ MARKI
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'brands' ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Brands Dropdown */}
-                {activeMenu === 'brands' && (
-                  <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={closeMenu}
-                  >
-                    <div className="grid grid-cols-6 gap-6 p-6">
-                      {brands.map((brand, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
-                            <span className="text-2xl">{brand.icon}</span>
-                            <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                              {brand.title}
-                            </h3>
-                          </div>
-                          <ul className="space-y-1">
-                            {brand.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Promotions Menu */}
               <div 
-                className="relative"
+                className="relative menu-item-with-separator"
                 onMouseEnter={() => openMenu('promotions')}
                 onMouseLeave={closeMenu}
               >
@@ -440,66 +372,143 @@ export default function Header() {
                   ⭐ PROMOCJE
                   <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${activeMenu === 'promotions' ? 'rotate-180' : ''}`} />
                 </Button>
-
-                {/* Promotions Dropdown */}
-                {activeMenu === 'promotions' && (
-                  <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={closeMenu}
-                  >
-                    <div className="grid grid-cols-4 gap-6 p-6">
-                      {promotions.map((promo, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
-                            <div className="flex items-center space-x-2">
-                              <span className="text-2xl">{promo.icon}</span>
-                              <h3 className="font-pixel text-sm text-gray-800 font-bold">
-                                {promo.title}
-                              </h3>
-                            </div>
-                            <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
-                              {promo.badge}
-                            </span>
-                          </div>
-                          <ul className="space-y-1">
-                            {promo.subcategories.map((sub, subIndex) => (
-                              <li key={subIndex}>
-                                <a 
-                                  href="#" 
-                                  className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
-                                >
-                                  {sub}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Special footer with extra offers */}
-                    <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
-                      <div className="grid grid-cols-3 gap-4 text-white text-center">
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          🎮 WEEKLY SPECIAL<br/>
-                          <span className="text-coin-yellow">-70% RETRO PACK</span>
-                        </div>
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          🏆 BOSS FIGHT<br/>
-                          <span className="text-coin-yellow">MEGA BUNDLE 99zł</span>
-                        </div>
-                        <div className="bg-black/20 p-3 rounded font-pixel text-xs">
-                          ⭐ POWER-UP<br/>
-                          <span className="text-coin-yellow">DARMOWA DOSTAWA</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Centered Dropdowns Container */}
+        <div className="absolute top-full left-0 right-0 z-[200]">
+          {/* Categories Dropdown */}
+          {activeMenu === 'categories' && (
+            <div 
+              className="flex justify-center"
+              onMouseEnter={cancelClose}
+              onMouseLeave={closeMenu}
+            >
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+                <div className="grid grid-cols-6 gap-6 p-6">
+                  {categories.map((category, index) => (
+                    <div key={index} className="space-y-3">
+                      <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                        <span className="text-2xl">{category.icon}</span>
+                        <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                          {category.title}
+                        </h3>
+                      </div>
+                      <ul className="space-y-1">
+                        {category.subcategories.map((sub, subIndex) => (
+                          <li key={subIndex}>
+                            <a 
+                              href="#" 
+                              className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                            >
+                              {sub}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Brands Dropdown */}
+          {activeMenu === 'brands' && (
+            <div 
+              className="flex justify-center"
+              onMouseEnter={cancelClose}
+              onMouseLeave={closeMenu}
+            >
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+                <div className="grid grid-cols-6 gap-6 p-6">
+                  {brands.map((brand, index) => (
+                    <div key={index} className="space-y-3">
+                      <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                        <span className="text-2xl">{brand.icon}</span>
+                        <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                          {brand.title}
+                        </h3>
+                      </div>
+                      <ul className="space-y-1">
+                        {brand.subcategories.map((sub, subIndex) => (
+                          <li key={subIndex}>
+                            <a 
+                              href="#" 
+                              className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                            >
+                              {sub}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Promotions Dropdown */}
+          {activeMenu === 'promotions' && (
+            <div 
+              className="flex justify-center"
+              onMouseEnter={cancelClose}
+              onMouseLeave={closeMenu}
+            >
+              <div className="bg-white border-4 border-pixel-black rounded-lg shadow-2xl w-[1200px] opacity-100 transition-opacity duration-200">
+                <div className="grid grid-cols-4 gap-6 p-6">
+                  {promotions.map((promo, index) => (
+                    <div key={index} className="space-y-3">
+                      <div className="flex items-center justify-between border-b-2 border-gray-200 pb-2">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-2xl">{promo.icon}</span>
+                          <h3 className="font-pixel text-sm text-gray-800 font-bold">
+                            {promo.title}
+                          </h3>
+                        </div>
+                        <span className={`${promo.badgeColor} text-white px-2 py-1 font-pixel text-xs rounded`}>
+                          {promo.badge}
+                        </span>
+                      </div>
+                      <ul className="space-y-1">
+                        {promo.subcategories.map((sub, subIndex) => (
+                          <li key={subIndex}>
+                            <a 
+                              href="#" 
+                              className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                            >
+                              {sub}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Special footer with extra offers */}
+                <div className="border-t-2 border-gray-200 bg-gradient-to-r from-mario-red to-mario-blue p-4">
+                  <div className="grid grid-cols-3 gap-4 text-white text-center">
+                    <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                      🎮 WEEKLY SPECIAL<br/>
+                      <span className="text-coin-yellow">-70% RETRO PACK</span>
+                    </div>
+                    <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                      🏆 BOSS FIGHT<br/>
+                      <span className="text-coin-yellow">MEGA BUNDLE 99zł</span>
+                    </div>
+                    <div className="bg-black/20 p-3 rounded font-pixel text-xs">
+                      ⭐ POWER-UP<br/>
+                      <span className="text-coin-yellow">DARMOWA DOSTAWA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
