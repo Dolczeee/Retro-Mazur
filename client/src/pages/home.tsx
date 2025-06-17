@@ -28,9 +28,9 @@ export default function Home() {
               #84d0f0 100%
             )
           `,
-          backgroundSize: 'cover, 100% 100%',
-          backgroundPosition: 'center, center',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: '200px auto, 100% 100%',
+          backgroundPosition: 'top left, center',
+          backgroundRepeat: 'repeat-x, no-repeat',
           imageRendering: 'pixelated'
         }}>
           <HeroBanner />
