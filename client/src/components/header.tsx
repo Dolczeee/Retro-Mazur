@@ -292,7 +292,7 @@ export default function Header() {
             <img 
               src="/src/logo/Arcade 2.png" 
               alt="Retro Mazur Logo" 
-              className="h-20 w-auto mr-4 object-contain"
+              className="h-24 w-auto mr-4 object-contain"
             />
           </div>
 
