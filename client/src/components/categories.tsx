@@ -1,7 +1,7 @@
 export default function Categories() {
   const categories = [
     { icon: "🎮", name: "KONSOLE", description: "Nintendo, Sega, Sony", hoverColor: "hover:bg-mario-red" },
-    { icon: "💿", name: "GRY", description: "Kasety i płyty", hoverColor: "hover:bg-mario-blue" },
+    { icon: "💿", name: "GRY", description: "Kasety", hoverColor: "hover:bg-mario-blue" },
     { icon: "🕹️", name: "PADY", description: "Kontrolery", hoverColor: "hover:bg-pipe-green" },
     { icon: "🔧", name: "AKCESORIA", description: "Kable, adaptery", hoverColor: "hover:bg-coin-yellow hover:text-pixel-black" },
     { icon: "⚙️", name: "CZĘŚCI", description: "Zamienne elementy", hoverColor: "hover:bg-mario-red" },
