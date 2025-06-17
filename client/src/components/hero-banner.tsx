@@ -3,12 +3,7 @@ import { ArrowRight, Star, Clock } from "lucide-react";
 
 export default function HeroBanner() {
   return (
-    <section className="relative pt-8 pb-0 px-6 overflow-hidden" style={{
-      backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
-      backgroundSize: '970px auto',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'repeat-x'
-    }}>
+    <section className="relative pt-8 pb-0 px-6 overflow-hidden">
       <div className="mx-auto px-6 sm:px-8 lg:px-12 flex justify-center">
         <div className="flex gap-6">
           {/* Main banner - left side */}

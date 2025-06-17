@@ -16,8 +16,10 @@ export default function Home() {
     <div className="min-h-screen bg-retro-beige">
       <Header />
       <main>
-        <HeroBanner />
-        <Categories />
+        <div className="bg-mario-blue">
+          <HeroBanner />
+          <Categories />
+        </div>
         <FeaturedProducts />
         <NewProducts />
         <PopularProducts />
