@@ -1,10 +1,10 @@
 import { Search, User, Heart, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import MegaMenu from "./mega-menu";
 import { useState } from "react";
 
 export default function Header() {
+  const [showCategories, setShowCategories] = useState(false);
 
   const categories = [
     {
@@ -153,7 +153,41 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-3">
             <div className="flex items-center space-x-8 relative">
-              <MegaMenu />
+              <Button 
+                className="bg-pipe-green px-4 py-2 font-pixel text-sm mario-button flex items-center hover:bg-pipe-green"
+                onClick={() => setShowCategories(!showCategories)}
+              >
+                <Menu className="w-4 h-4 mr-2" /> KATEGORIE
+                <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${showCategories ? 'rotate-180' : ''}`} />
+              </Button>
+
+              {/* Categories Dropdown */}
+              {showCategories && (
+                <div className="absolute top-full left-0 mt-2 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-50 min-w-[800px]">
+                  <div className="grid grid-cols-3 gap-6 p-6">
+                    {categories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 border-b-2 border-gray-200 pb-2">
+                          <span className="text-2xl">{category.icon}</span>
+                          <h3 className="font-pixel text-sm text-mario-red font-bold">{category.title}</h3>
+                        </div>
+                        <ul className="space-y-1">
+                          {category.subcategories.map((sub, subIndex) => (
+                            <li key={subIndex}>
+                              <a 
+                                href="#" 
+                                className="text-gray-800 text-xs hover:text-mario-blue hover:bg-gray-100 block px-2 py-1 rounded transition-colors font-medium"
+                              >
+                                {sub}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-coin-yellow font-pixel text-sm">🏷️ MARKI</span>
@@ -162,7 +196,13 @@ export default function Header() {
           </div>
         </div>
 
-        
+        {/* Overlay to close dropdown */}
+        {showCategories && (
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setShowCategories(false)}
+          />
+        )}
       </nav>
     </header>
   );
