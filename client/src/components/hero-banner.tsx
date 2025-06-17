@@ -10,13 +10,13 @@ export default function HeroBanner() {
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat-x'
     }}>
-      <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
+      <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1360px'}}>
         <div className="flex gap-6">
           {/* Main banner - left side */}
           <div className="flex-shrink-0">
-            <div className="relative overflow-hidden rounded-lg" style={{width: '840px', height: '316px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '1000px', height: '375px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=375"
                 alt="Retro gaming collection"
                 className="w-full h-full object-cover"
               />
@@ -46,9 +46,9 @@ export default function HeroBanner() {
           {/* Right sidebar */}
           <div className="flex-shrink-0 space-y-4">
             {/* First small banner */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '265px', height: '148px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '180px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
+                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=180"
                 alt="Game Boy collection"
                 className="w-full h-full object-cover"
               />
@@ -68,9 +68,9 @@ export default function HeroBanner() {
             </div>
 
             {/* Second small banner */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '265px', height: '148px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '320px', height: '180px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
+                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=180"
                 alt="PlayStation collection"
                 className="w-full h-full object-cover"
               />
