@@ -398,7 +398,7 @@ export default function Header() {
                 {/* Brands Dropdown */}
                 {activeMenu === 'brands' && (
                   <div 
-                    className="absolute top-full left-0 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
@@ -444,7 +444,7 @@ export default function Header() {
                 {/* Promotions Dropdown */}
                 {activeMenu === 'promotions' && (
                   <div 
-                    className="absolute top-full left-0 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-0 bg-white border-4 border-pixel-black rounded-lg shadow-2xl z-[200] w-[1200px] opacity-100 transition-opacity duration-200"
                     onMouseEnter={cancelClose}
                     onMouseLeave={closeMenu}
                   >
