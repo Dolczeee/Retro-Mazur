@@ -56,11 +56,6 @@ export default function Categories() {
                 </h2>
               </div>
             </div>
-            
-            {/* Floating elements around cloud */}
-            <div className="absolute -top-4 -left-4 text-2xl animate-bounce">⭐</div>
-            <div className="absolute -top-2 -right-6 text-xl animate-pulse">✨</div>
-            <div className="absolute -bottom-2 left-8 text-lg animate-bounce" style={{animationDelay: '0.5s'}}>💫</div>
           </div>
           
           </div>
