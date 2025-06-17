@@ -28,7 +28,7 @@ export default function Home() {
               #84d0f0 100%
             )
           `,
-          backgroundSize: '100px auto, 100% 100%',
+          backgroundSize: '1000px auto, 100% 100%',
           backgroundPosition: 'center center, center',
           backgroundRepeat: 'repeat-x, no-repeat',
           imageRendering: 'pixelated'
