@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Clock } from "lucide-react";
 
@@ -13,11 +12,11 @@ export default function HeroBanner() {
     }}>
       <div className="mx-auto px-6 sm:px-8 lg:px-12" style={{maxWidth: '1120px'}}>
         <div className="flex gap-6">
-          {/* Main banner - left side (same width as fishing store) */}
+          {/* Main banner - left side */}
           <div className="flex-shrink-0">
-            <div className="relative overflow-hidden rounded-lg" style={{width: '840px', height: '315px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '840px', height: '316px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=840&h=315"
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
                 alt="Retro gaming collection"
                 className="w-full h-full object-cover"
               />
@@ -44,24 +43,24 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          {/* Right sidebar - adjusted proportions */}
-          <div className="flex-shrink-0 space-y-6">
-            {/* First small banner - better proportions */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '260px', height: '150px'}}>
+          {/* Right sidebar */}
+          <div className="flex-shrink-0 space-y-4">
+            {/* First small banner */}
+            <div className="relative overflow-hidden rounded-lg" style={{width: '265px', height: '148px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&h=150"
+                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
                 alt="Game Boy collection"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-pixel text-base mb-1 text-shadow-pixel">
+                  <h3 className="font-pixel text-lg mb-2 text-shadow-pixel">
                     🕹️ Game Boy Fever
                   </h3>
-                  <p className="text-xs opacity-90 mb-2">
+                  <p className="text-sm opacity-90 mb-2">
                     Portable retro w super cenach
                   </p>
-                  <Button className="mario-button bg-coin-yellow text-pixel-black px-2 py-1 font-pixel hover:bg-coin-yellow text-xs">
+                  <Button className="mario-button bg-coin-yellow text-pixel-black px-3 py-1 font-pixel hover:bg-coin-yellow text-xs">
                     SPRAWDŹ →
                   </Button>
                 </div>
@@ -69,18 +68,18 @@ export default function HeroBanner() {
             </div>
 
             {/* Second small banner */}
-            <div className="relative overflow-hidden rounded-lg" style={{width: '260px', height: '150px'}}>
+            <div className="relative overflow-hidden rounded-lg" style={{width: '265px', height: '148px'}}>
               <img 
-                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&h=150"
+                src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2452&h=920"
                 alt="PlayStation collection"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-pixel text-base mb-1 text-shadow-pixel">
+                  <h3 className="font-pixel text-lg mb-2 text-shadow-pixel">
                     🎮 PlayStation Retro
                   </h3>
-                  <p className="text-xs opacity-90">
+                  <p className="text-sm opacity-90">
                     Klasyki Sony w jednym miejscu
                   </p>
                 </div>
@@ -92,4 +91,3 @@ export default function HeroBanner() {
     </section>
   );
 }
-
