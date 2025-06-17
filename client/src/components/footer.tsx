@@ -8,7 +8,7 @@ export default function Footer() {
             <img 
               src="/retro-mazur-logo.png" 
               alt="Retro Mazur Logo" 
-              className="h-16 mb-4"
+              className="h-18 w-auto mb-4 object-contain"
             />
             <p className="text-gray-300 mb-4">
               Twój sklep z retro grami i konsolami. 

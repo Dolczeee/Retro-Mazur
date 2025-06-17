@@ -28,7 +28,7 @@ export default function Header() {
             <img 
               src="/retro-mazur-logo.png" 
               alt="Retro Mazur Logo" 
-              className="h-16 mr-4"
+              className="h-20 w-auto mr-4 object-contain"
             />
           </div>
           
