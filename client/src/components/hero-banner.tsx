@@ -60,7 +60,7 @@ export default function HeroBanner() {
             </div>
 
             {/* Second promo */}
-            <div className="relative overflow-hidden rounded-lg h-[190px]">
+            <div className="relative overflow-hidden rounded-lg h-[190px] bg-gradient-to-r from-pipe-green to-mario-blue">
               <img 
                 src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250"
                 alt="PlayStation collection"
