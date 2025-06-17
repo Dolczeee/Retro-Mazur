@@ -52,17 +52,7 @@ export default function Categories() {
             </div>
           </div>
           
-          {/* Mario-style decorative elements */}
-          <div className="flex justify-center items-center space-x-4 mb-4">
-            <div className="w-8 h-8 bg-coin-yellow border-2 border-pixel-black coin-spin"></div>
-            <div className="font-pixel text-white text-lg">★ ★ ★</div>
-            <div className="w-8 h-8 bg-coin-yellow border-2 border-pixel-black coin-spin"></div>
           </div>
-          
-          <p className="font-pixel text-white/90 text-sm tracking-wide">
-            PRZYGODA ZACZYNA SIĘ TUTAJ!
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {worlds.map((world, index) => (
