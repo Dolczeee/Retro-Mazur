@@ -90,12 +90,7 @@ export default function Categories() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <Button className="bg-coin-yellow text-pixel-black font-pixel text-lg px-8 py-4 mario-button transform hover:scale-105 transition-transform">
-            🚀 START YOUR ADVENTURE!
-          </Button>
-        </div>
+        
       </div>
     </section>
   );
