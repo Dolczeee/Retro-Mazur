@@ -59,12 +59,27 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Roboto', sans-serif;
     background-color: var(--retro-beige);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -319,3 +334,48 @@
     0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
   }
+
+/* Responsywne poprawki */
+@media (max-width: 768px) {
+  .font-pixel {
+    font-size: 0.7rem;
+  }
+  
+  .mario-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .pixel-card {
+    box-shadow: 3px 3px 0px var(--pixel-black);
+  }
+  
+  .pixel-card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px var(--pixel-black);
+  }
+}
+
+@media (max-width: 480px) {
+  .font-pixel {
+    font-size: 0.6rem;
+  }
+  
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+/* Poprawki dla lepszego wyświetlania */
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
