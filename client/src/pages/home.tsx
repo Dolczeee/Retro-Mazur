@@ -16,7 +16,12 @@ export default function Home() {
     <div className="min-h-screen bg-retro-beige">
       <Header />
       <main>
-        <div className="bg-mario-blue">
+        <div className="bg-mario-blue" style={{
+          backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
+          backgroundSize: '970px auto',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat-x'
+        }}>
           <HeroBanner />
           <Categories />
         </div>
