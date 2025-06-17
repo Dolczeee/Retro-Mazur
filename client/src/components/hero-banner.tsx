@@ -45,7 +45,7 @@ export default function HeroBanner() {
           {/* Right sidebar - similar to fishing store */}
           <div className="lg:col-span-2 space-y-4">
             {/* Quick promo banner */}
-            <div className="relative overflow-hidden rounded-lg h-[190px] bg-gradient-to-r from-mario-blue to-pipe-green">
+            <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-mario-blue to-pipe-green" style={{width: '165px', height: '148px'}}>
               <div className="absolute inset-0 p-6 text-white">
                 <h3 className="font-pixel text-xl mb-3 text-shadow-pixel">
                   🕹️ Game Boy Fever
@@ -60,7 +60,7 @@ export default function HeroBanner() {
             </div>
 
             {/* Second promo */}
-            <div className="relative overflow-hidden rounded-lg h-[190px] bg-gradient-to-r from-pipe-green to-mario-blue">
+            <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-pipe-green to-mario-blue" style={{width: '165px', height: '148px'}}>
               <img 
                 src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250"
                 alt="PlayStation collection"
