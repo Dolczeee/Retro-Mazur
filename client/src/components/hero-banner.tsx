@@ -1,10 +1,60 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Clock } from "lucide-react";
 
 export default function HeroBanner() {
   return (
-    <section className="bg-retro-beige py-8">
+    <section className="relative py-16 px-4 overflow-hidden" style={{
+      backgroundImage: `url('/src/pixel SVG/tło niebieskie.svg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        {/* Clouds */}
+        <div className="absolute top-10 left-10 float-slow">
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-16 h-12" />
+        </div>
+        <div className="absolute top-20 right-20 float-slow" style={{animationDelay: '1s'}}>
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-20 h-15" />
+        </div>
+        <div className="absolute top-32 left-1/3 float-slow" style={{animationDelay: '2s'}}>
+          <img src="/src/pixel SVG/chmurka.svg" alt="Cloud" className="w-18 h-14" />
+        </div>
+
+        {/* Floating coins */}
+        <div className="absolute top-24 left-1/4 coin-animation">
+          <div className="w-8 h-8 bg-coin-yellow rounded-full border-2 border-pixel-black flex items-center justify-center text-xs font-pixel">
+            ★
+          </div>
+        </div>
+        <div className="absolute top-36 right-1/4 coin-animation" style={{animationDelay: '1s'}}>
+          <div className="w-8 h-8 bg-coin-yellow rounded-full border-2 border-pixel-black flex items-center justify-center text-xs font-pixel">
+            ★
+          </div>
+        </div>
+
+        {/* Question mark blocks */}
+        <div className="absolute top-20 right-1/3 power-up">
+          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-12 h-12" />
+        </div>
+        <div className="absolute bottom-28 left-20 power-up" style={{animationDelay: '0.5s'}}>
+          <img src="/src/pixel SVG/pytajnik.svg" alt="Question Block" className="w-12 h-12" />
+        </div>
+
+        {/* Brick platforms */}
+        <div className="absolute top-44 left-1/4 warp-pipe">
+          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-16 h-4" />
+        </div>
+        <div className="absolute bottom-36 right-1/4 warp-pipe" style={{animationDelay: '1.5s'}}>
+          <img src="/src/pixel SVG/blok cegły.svg" alt="Brick Block" className="w-20 h-4" />
+        </div>
+
+        {/* Grass decoration at bottom */}
+        <div className="absolute bottom-0 left-0 w-full">
+          <img src="/src/pixel SVG/trawa.svg" alt="Grass" className="w-full h-8 object-cover" />
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main banner - left side */}
@@ -37,7 +87,7 @@ export default function HeroBanner() {
               </div>
             </div>
           </div>
-          
+
           {/* Right sidebar with blog links and offers */}
           <div className="space-y-4">
             {/* Featured article */}
@@ -59,7 +109,7 @@ export default function HeroBanner() {
                 </div>
               </div>
             </div>
-            
+
             {/* Second article */}
             <div className="relative overflow-hidden rounded-lg h-44">
               <img 
@@ -79,8 +129,8 @@ export default function HeroBanner() {
                 </div>
               </div>
             </div>
-            
-            
+
+
           </div>
         </div>
       </div>
