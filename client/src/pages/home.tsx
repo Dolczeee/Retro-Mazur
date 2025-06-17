@@ -20,12 +20,12 @@ export default function Home() {
           backgroundImage: `
             url('/src/pixel SVG/tło niebieskie.svg'),
             linear-gradient(to bottom, 
-              #42c1f2 0%, 
-              #42c1f2 33%, 
-              #64c8ee 33%, 
-              #64c8ee 66%, 
-              #84d0f0 66%, 
-              #84d0f0 100%
+              #00C0F0 0%, 
+              #00C0F0 33%, 
+              #4EC8EC 33%, 
+              #4EC8EC 66%, 
+              #77D0EE 66%, 
+              #77D0EE 100%
             )
           `,
           backgroundSize: '1000px auto, 100% 100%',
