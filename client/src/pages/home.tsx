@@ -1,6 +1,6 @@
-
 import Header from "@/components/header";
 import HeroBanner from "@/components/hero-banner";
+import Categories from "@/components/categories";
 import FeaturedProducts from "@/components/featured-products";
 import NewProducts from "@/components/new-products";
 import PopularProducts from "@/components/popular-products";
@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroBanner />
+        <Categories />
         <FeaturedProducts />
         <NewProducts />
         <PopularProducts />
