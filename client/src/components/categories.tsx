@@ -90,7 +90,7 @@ export default function Categories() {
           {worlds.map((world, index) => (
             <div
               key={index}
-              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-4`}
+              className={`${world.color} text-white border-2 border-white transform hover:scale-[1.02] transition-all duration-300 cursor-pointer group relative p-6`}
             >
               {/* Top - World number */}
               <div className="font-pixel text-[10px] text-coin-yellow mb-2 bg-pixel-black px-1.5 py-0.5 inline-block">
