@@ -6,10 +6,10 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <img 
-              src="/src/logo/Arcade 2.png" 
-              alt="Retro Mazur Logo" 
-              className="h-18 w-auto mb-4 object-contain"
-            />
+                src="/assets/images/logo/Arcade 2.png" 
+                alt="Retro Mazur Logo" 
+                className="h-18 w-auto mb-4 object-contain"
+              />
             <p className="text-gray-300 mb-4">
               Twój sklep z retro grami i konsolami. 
               Odkryj nostalgię gier z lat 80. i 90.
@@ -26,7 +26,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           {/* Categories */}
           <div>
             <h3 className="font-pixel text-lg mb-4 coin-yellow">KATEGORIE</h3>
@@ -38,7 +38,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-white transition-colors">Akcesoria</a></li>
             </ul>
           </div>
-          
+
           {/* Customer Service */}
           <div>
             <h3 className="font-pixel text-lg mb-4 coin-yellow">OBSŁUGA KLIENTA</h3>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-white transition-colors">Polityka prywatności</a></li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h3 className="font-pixel text-lg mb-4 coin-yellow">KONTAKT</h3>
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2025 Retro Mazur. Wszystkie prawa zastrzeżone. 
